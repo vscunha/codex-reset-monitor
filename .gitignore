@@ -1,0 +1,18 @@
+# Local configuration and secrets
+config.env
+.env
+*.env.local
+
+# Runtime state
+state.json
+.local/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store

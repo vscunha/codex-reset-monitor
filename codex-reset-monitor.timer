@@ -1,0 +1,11 @@
+[Unit]
+Description=Check Codex usage every five minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=5min
+Persistent=true
+Unit=codex-reset-monitor.service
+
+[Install]
+WantedBy=timers.target

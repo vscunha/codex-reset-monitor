@@ -1,0 +1,12 @@
+[Unit]
+Description=Check Codex usage resets and send a notification
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+EnvironmentFile=-%h/.config/codex-reset-monitor/config.env
+ExecStart=/usr/bin/env python3 %h/.local/lib/codex-reset-monitor/monitor.py --once --env-file %h/.config/codex-reset-monitor/config.env
+
+[Install]
+WantedBy=default.target
