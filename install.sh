@@ -8,6 +8,13 @@ SYSTEMD_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/systemd/user"
 
 mkdir -p "$CONFIG_DIR" "$LIB_DIR" "$SYSTEMD_DIR"
 install -m 0755 "$SOURCE_DIR/monitor.py" "$LIB_DIR/monitor.py"
+install -m 0755 "$SOURCE_DIR/backfill.py" "$LIB_DIR/backfill.py"
+if [[ ! -f "$CONFIG_DIR/model-pricing.json" ]]; then
+  install -m 0600 "$SOURCE_DIR/model-pricing.json.example" "$CONFIG_DIR/model-pricing.json"
+  echo "Created $CONFIG_DIR/model-pricing.json"
+else
+  echo "Kept existing $CONFIG_DIR/model-pricing.json"
+fi
 install -m 0644 "$SOURCE_DIR/codex-reset-monitor.service" "$SYSTEMD_DIR/codex-reset-monitor.service"
 install -m 0644 "$SOURCE_DIR/codex-reset-monitor.timer" "$SYSTEMD_DIR/codex-reset-monitor.timer"
 

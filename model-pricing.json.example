@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "pricing_mode": "codex",
+  "revision": "2026-09-23",
+  "verified_on": "2026-09-23",
+  "currency": "USD",
+  "unit": "per_1m_tokens",
+  "processing_tier": "standard",
+  "models": {
+    "gpt-5.5": {
+      "input": "5.00",
+      "output": "30.00",
+      "cached_input": "0.50",
+      "processing_multipliers": {
+        "standard": "1"
+      }
+    },
+    "gpt-5.6-luna": {
+      "input": "0.20",
+      "output": "1.20",
+      "cached_input": "0.02",
+      "long_context_threshold_tokens": 272000,
+      "long_context_input_multiplier": "2",
+      "long_context_output_multiplier": "1.5",
+      "processing_multipliers": {
+        "standard": "1",
+        "fast": "2",
+        "priority": "2"
+      }
+    },
+    "gpt-5.6-terra": {
+      "input": "2.00",
+      "output": "12.00",
+      "cached_input": "0.20",
+      "long_context_threshold_tokens": 272000,
+      "long_context_input_multiplier": "2",
+      "long_context_output_multiplier": "1.5",
+      "processing_multipliers": {
+        "standard": "1",
+        "fast": "2",
+        "priority": "2"
+      }
+    },
+    "gpt-5.6-sol": {
+      "input": "4.00",
+      "output": "20.00",
+      "cached_input": "0.40",
+      "long_context_threshold_tokens": 272000,
+      "long_context_input_multiplier": "2",
+      "long_context_output_multiplier": "1.5",
+      "processing_multipliers": {
+        "standard": "1",
+        "fast": "2",
+        "priority": "2"
+      },
+      "promotion_review_after": "2026-11-21"
+    },
+    "gpt-6-astra": {
+      "input": "10.00",
+      "output": "50.00",
+      "cached_input": "1.00",
+      "long_context_threshold_tokens": 272000,
+      "long_context_input_multiplier": "2",
+      "long_context_output_multiplier": "1.5",
+      "processing_multipliers": {
+        "standard": "1",
+        "fast": "2",
+        "priority": "2"
+      }
+    },
+    "gpt-6-sol": {
+      "input": "2.00",
+      "output": "10.00",
+      "cached_input": "0.20",
+      "long_context_threshold_tokens": 272000,
+      "long_context_input_multiplier": "2",
+      "long_context_output_multiplier": "1.5",
+      "processing_multipliers": {
+        "standard": "1",
+        "fast": "2",
+        "priority": "2"
+      }
+    },
+    "gpt-6-luna": {
+      "input": "0.10",
+      "output": "0.50",
+      "cached_input": "0.01",
+      "long_context_threshold_tokens": 272000,
+      "long_context_input_multiplier": "2",
+      "long_context_output_multiplier": "1.5",
+      "processing_multipliers": {
+        "standard": "1",
+        "fast": "2",
+        "priority": "2"
+      }
+    },
+    "gpt-6.1-sol": {
+      "input": "2.00",
+      "output": "10.00",
+      "cached_input": "0.10",
+      "cache_write": "2.50",
+      "cache_write_billed_as": "write",
+      "long_context_threshold_tokens": 272000,
+      "long_context_input_multiplier": "2",
+      "long_context_output_multiplier": "1.5",
+      "processing_multipliers": {
+        "standard": "1",
+        "fast": "2",
+        "priority": "2"
+      }
+    }
+  },
+  "aliases": {
+    "gpt-5-5": "gpt-5.5",
+    "gpt5.5": "gpt-5.5",
+    "luna": "gpt-5.6-luna",
+    "gpt-5-6-luna": "gpt-5.6-luna",
+    "gpt-5.6": "gpt-5.6-sol",
+    "gpt5.6": "gpt-5.6-sol",
+    "sol": "gpt-5.6-sol",
+    "terra": "gpt-5.6-terra",
+    "gpt-5-6-terra": "gpt-5.6-terra",
+    "gpt-5-6-sol": "gpt-5.6-sol",
+    "astra": "gpt-6-astra",
+    "gpt-6": "gpt-6-astra",
+    "gpt6": "gpt-6-astra",
+    "gpt-6.0-astra": "gpt-6-astra",
+    "gpt-6.0-luna": "gpt-6-luna",
+    "gpt6-luna": "gpt-6-luna",
+    "gpt-6-0-luna": "gpt-6-luna",
+    "gpt-6.0-sol": "gpt-6-sol",
+    "gpt6-sol": "gpt-6-sol",
+    "gpt-6-0-sol": "gpt-6-sol",
+    "gpt-6-1-sol": "gpt-6.1-sol",
+    "gpt61-sol": "gpt-6.1-sol",
+    "gpt-6.1": "gpt-6.1-sol"
+  },
+  "sources": {
+    "gpt-5.5": "https://developers.openai.com/api/docs/models/gpt-5.5",
+    "gpt-5.6-luna": "https://developers.openai.com/api/docs/models/gpt-5.6-luna",
+    "gpt-5.6-terra": "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+    "gpt-5.6-sol": "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
+    "gpt-6-astra": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+    "gpt-6-sol": "https://developers.openai.com/api/docs/models/gpt-6-sol",
+    "gpt-6-luna": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+    "gpt-6.1-sol": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+  }
+}

@@ -1,0 +1,4508 @@
+{
+  "capture_baseline": {
+    "accepted": 0,
+    "baseline": true,
+    "coverage_gap": false,
+    "excluded": 0,
+    "files_seen": 11,
+    "invalid": 0,
+    "records_read": 0
+  },
+  "dry_run": false,
+  "plan": {
+    "calibration_by_model": {
+      "gpt-6-luna": {
+        "intervals": 0,
+        "reason": null,
+        "rejected_mixed_intervals": 0,
+        "source": "command_line:model_override",
+        "target_tokens": "377879.4",
+        "tokens_per_point": "3778794"
+      }
+    },
+    "granularity": {
+      "account_percentage_unit": "integer_percentage_point",
+      "accumulate_points": 2,
+      "chunk_tokens": 50000,
+      "fine_chunk_tokens": 5000,
+      "fine_window_fraction": "0.15",
+      "note": "Each crossing is bracketed by the request that contained it; accumulating N points divides that bracket by N.",
+      "snapshot_poll_seconds": 0.25
+    },
+    "harness": "pi",
+    "headroom_percentage_granularity": "integer_buckets",
+    "mode": "crossing",
+    "models": [
+      "gpt-6-luna"
+    ],
+    "monitor_state_modified": false,
+    "monitor_usage_log_modified": false,
+    "target_percentage_points": "0.1",
+    "target_point_is_estimated": true,
+    "token_source": "auto",
+    "window": "secondary"
+  },
+  "results": [
+    {
+      "attempts": [
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 1,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303527.462872,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303522.3493729,
+            "stderr_tail": "",
+            "stdout_bytes": 958059,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.01886818916299750661189787006",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 2,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303533.440328,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303528.1867886,
+            "stderr_tail": "",
+            "stdout_bytes": 958059,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.03773637832599501322379574012",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 3,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303539.6131835,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303534.2017643,
+            "stderr_tail": "",
+            "stdout_bytes": 958059,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.05660456748899251983569361018",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 4,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303548.0359423,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303543.1022925,
+            "stderr_tail": "",
+            "stdout_bytes": 958059,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.07547275665199002644759148024",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 5,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303553.807073,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303549.0084934,
+            "stderr_tail": "",
+            "stdout_bytes": 958059,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.09434094581498753305948935031",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 6,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303559.5098176,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303554.609494,
+            "stderr_tail": "",
+            "stdout_bytes": 958059,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.1132091349779850396713872204",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 7,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303565.18142,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303560.2102544,
+            "stderr_tail": "",
+            "stdout_bytes": 958059,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.1320773241409825462832850904",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 8,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303571.0511625,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303566.0043945,
+            "stderr_tail": "",
+            "stdout_bytes": 958059,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.1509455133039800528951829605",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 9,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303577.2653856,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303571.8579895,
+            "stderr_tail": "",
+            "stdout_bytes": 958059,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.1698137024669775595070808306",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 10,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303583.0085225,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303578.074325,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.1886818916299750661189787006",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 11,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303589.105669,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303583.8861094,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.2075500807929725727308765707",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 12,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303594.9275393,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303589.9957864,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.2264182699559700793427744407",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 13,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303603.9249356,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303595.7356682,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.2452864591189675859546723108",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 14,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303609.6406193,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303604.7179239,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.2641546482819650925665701809",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 15,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303615.4104276,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303610.399457,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.2830228374449625991784680509",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 16,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303621.1581316,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303616.214845,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.3018910266079601057903659210",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 17,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303626.990167,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303622.1774113,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.3207592157709576124022637910",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 18,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303632.659847,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303627.9045079,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.3396274049339551190141616611",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 19,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303639.2354703,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303633.7480555,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.3584955940969526256260595312",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 20,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303646.4459088,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303640.1983647,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.3773637832599501322379574012",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 21,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303651.9516556,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303647.1627874,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.3962319724229476388498552713",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 22,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303658.4665432,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303652.793802,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.4151001615859451454617531413",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 23,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303664.6350825,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303659.225735,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.4339683507489426520736510114",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 24,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303670.1031463,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303665.4777513,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.4528365399119401586855488815",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 25,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303675.7971325,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303670.9999628,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.4717047290749376652974467515",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 26,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303681.5029027,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303676.710999,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.4905729182379351719093446216",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 27,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303687.198898,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303682.2761633,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.5094411074009326785212424917",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 28,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303692.8461802,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303687.9854226,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.5283092965639301851331403617",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 29,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303698.7126417,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303693.5962057,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.5471774857269276917450382318",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 30,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303704.6375356,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303699.6007247,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.5660456748899251983569361018",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 31,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303710.3670523,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303705.4618752,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.5849138640529227049688339719",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 32,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303716.4192863,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303711.3357456,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.6037820532159202115807318420",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 33,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303722.0655036,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303717.2257206,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.6226502423789177181926297120",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 34,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303728.2419262,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303722.82663,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.6415184315419152248045275821",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 35,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303734.0704613,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303729.034986,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.6603866207049127314164254521",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 36,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303740.1415026,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303734.8116827,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.6792548098679102380283233222",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 37,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303745.697231,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303740.9207165,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.6981229990309077446402211923",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 38,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303751.3090742,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303746.5140955,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.7169911881939052512521190623",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 39,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303757.0120528,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303752.2334626,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.7358593773569027578640169324",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 40,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303762.971606,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303757.9856925,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.7547275665199002644759148024",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 41,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303768.656302,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303763.7678583,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.7735957556828977710878126725",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 42,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303774.691031,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303769.3863914,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.7924639448458952776997105426",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 43,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303780.3100913,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303775.4170015,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.8113321340088927843116084126",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 44,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303786.1244552,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303781.1263862,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.8302003231718902909235062827",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 45,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303792.4175754,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303786.979859,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.8490685123348877975354041528",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 50000,
+          "attempt": 46,
+          "chunk_tokens": 50000,
+          "command": {
+            "finished_at": 1790303798.3658621,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303793.1877928,
+            "stderr_tail": "",
+            "stdout_bytes": 958062,
+            "timed_out": false
+          },
+          "cost_usd": "0.0071331",
+          "estimated_progress_points": "0.8679367014978853041473020228",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0071331",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 71291,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 71299,
+            "uncached_input_tokens": 71291
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 47,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303804.2623577,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303799.343747,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.8698582140227808131377365371",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 48,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303809.7594707,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303805.0363624,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.8717797265476763221281710514",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 49,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303816.1254933,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303810.554955,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.8737012390725718311186055657",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 50,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303822.1746082,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303817.3862534,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.8756227515974673401090400800",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 51,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303828.3712256,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303823.0466378,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.8775442641223628490994745943",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 52,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303833.782645,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303829.1737719,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.8794657766472583580899091086",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 53,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303839.8820133,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303834.4995975,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.8813872891721538670803436229",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 54,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303855.5997508,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303840.7491214,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.8833088016970493760707781372",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 55,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303861.457612,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303856.3525708,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.8852303142219448850612126514",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 56,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303866.9491026,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303862.3618429,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.8871518267468403940516471657",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 57,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303872.2812438,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303867.7198813,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.8890733392717359030420816800",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 58,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303877.7750216,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303873.0411472,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.8909948517966314120325161943",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 59,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303883.1064346,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303878.5766943,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.8929163643215269210229507086",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 60,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303888.8262782,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303883.9313164,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.8948378768464224300133852229",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 61,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303894.1167762,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303889.5604622,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.8967593893713179390038197372",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 62,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303899.6950767,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303894.871529,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.8986809018962134479942542515",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 63,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303905.4809623,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303900.8731205,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9006024144211089569846887658",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 64,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303911.2332666,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303906.3765001,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9025239269460044659751232801",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 65,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303916.9156017,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303912.0712616,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9044454394708999749655577944",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 66,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303922.652007,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303917.70138,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9063669519957954839559923087",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 67,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303928.1273565,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303923.4263864,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9082884645206909929464268229",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 68,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303933.450585,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303928.8950253,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9102099770455865019368613372",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 69,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303939.1431174,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303934.1883247,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9121314895704820109272958515",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 70,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303944.703117,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303939.935703,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9140530020953775199177303658",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 71,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303950.1428869,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303945.5597076,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9159745146202730289081648801",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 72,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303955.6864398,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303950.9064233,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9178960271451685378985993944",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 73,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303961.4015083,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303956.6848898,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9198175396700640468890339087",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 74,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303967.1516259,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303962.2643144,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9217390521949595558794684230",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 75,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303979.686735,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303967.9607816,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9236605647198550648699029373",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 76,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303985.5546947,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303980.7950745,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9255820772447505738603374516",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 77,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303991.0661182,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303986.294733,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9275035897696460828507719659",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 78,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790303996.4757745,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303991.883715,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9294251022945415918412064802",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 79,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304002.0216339,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790303997.478435,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9313466148194371008316409945",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 80,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304008.4343662,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790304002.855221,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9332681273443326098220755087",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 81,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304013.8537748,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790304009.213575,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9351896398692281188125100230",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 82,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304019.6763048,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790304014.6496172,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9371111523941236278029445373",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 83,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304025.0479333,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790304020.4254827,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9390326649190191367933790516",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 84,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304030.8559608,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790304025.9833388,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9409541774439146457838135659",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 85,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304043.0594478,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790304031.6485577,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9428756899688101547742480802",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 86,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304048.901344,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790304043.8141603,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9447972024937056637646825945",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 87,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304054.4746542,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790304049.7740006,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9467187150186011727551171088",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 88,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304060.7249136,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790304056.1596425,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9486402275434966817455516231",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 89,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304066.4016504,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790304061.5050423,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9505617400683921907359861374",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 90,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304071.8792317,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790304067.2130642,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9524832525932876997264206517",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 91,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304077.2996535,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790304072.6325965,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9544047651181832087168551660",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 92,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304083.2683349,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790304078.185882,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9563262776430787177072896803",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 93,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304088.7486863,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790304084.2143917,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9582477901679742266977241945",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 94,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304093.9658108,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790304089.4868865,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9601693026928697356881587088",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 95,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304099.469835,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790304094.796513,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9620908152177652446785932231",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 96,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304104.9687138,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790304100.304627,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9640123277426607536690277374",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 97,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304110.523809,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790304105.7015927,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9659338402675562626594622517",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 98,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304116.035556,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790304111.3605046,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9678553527924517716498967660",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 99,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304121.6114244,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790304116.8237102,
+            "stderr_tail": "",
+            "stdout_bytes": 101325,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9697768653173472806403312803",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        },
+        {
+          "after_percent": "54.0",
+          "approx_prompt_tokens": 5000,
+          "attempt": 100,
+          "chunk_tokens": 5000,
+          "command": {
+            "finished_at": 1790304127.1035182,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-luna"
+            ],
+            "returncode": 0,
+            "started_at": 1790304122.425739,
+            "stderr_tail": "",
+            "stdout_bytes": 101328,
+            "timed_out": false
+          },
+          "cost_usd": "0.0007293",
+          "estimated_progress_points": "0.9716983778422427896307657946",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-luna"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.0007293",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 7253,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 7261,
+            "uncached_input_tokens": 7253
+          }
+        }
+      ],
+      "baseline_percent": "54.0",
+      "baseline_reset_at": 1790771551,
+      "calibration": {
+        "intervals": 0,
+        "reason": null,
+        "rejected_mixed_intervals": 0,
+        "source": "command_line:model_override",
+        "target_tokens": "377879.4",
+        "tokens_per_point": "3778794"
+      },
+      "contamination_models": [],
+      "cost_complete": true,
+      "cost_usd": "0.3675048",
+      "crossings": [],
+      "estimated_progress_points": "0.9716983778422427896307657946",
+      "expected_tokens_per_point": "3778794",
+      "final_percent": "54.0",
+      "final_reset_at": 1790771551,
+      "finished_at": "2026-09-25T02:42:07.938413+00:00",
+      "harness": "pi",
+      "long_context_requests": 0,
+      "model": "gpt-6-luna",
+      "models": {
+        "gpt-6-luna": {
+          "cached_input_tokens": 0,
+          "complete": true,
+          "input_tokens": 3671048,
+          "known_cost_usd": "0.3675048",
+          "long_context_requests": 0,
+          "output_tokens": 800,
+          "requests": 100,
+          "uncached_input_tokens": 3671048
+        }
+      },
+      "observed_cost_per_point_usd": null,
+      "observed_delta_points": "0.0",
+      "observed_target_cost_usd": null,
+      "observed_target_tokens": null,
+      "observed_tokens_per_point": null,
+      "pi_reported_cost_usd": "0.3675048",
+      "pricing_revision": "2026-09-23",
+      "quantization_uncertainty_tokens_per_point": null,
+      "started_at": "2026-09-25T02:32:02.348447+00:00",
+      "status": "max_attempts_reached",
+      "target_percentage_points": "0.1",
+      "target_tokens": "377879.4",
+      "token_source": "pi",
+      "tokens": {
+        "cached_input_tokens": 0,
+        "input_tokens": 3671048,
+        "output_tokens": 800,
+        "requests": 100,
+        "total_tokens": 3671848,
+        "uncached_input_tokens": 3671048
+      },
+      "window": "secondary"
+    }
+  ],
+  "schema_version": 1
+}

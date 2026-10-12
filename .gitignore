@@ -16,3 +16,14 @@ __pycache__/
 .vscode/
 .idea/
 .DS_Store
+
+# Generated cycle evidence exports (large; keep locally).
+# Summaries and reports stay tracked as cycles/*.md.
+cycles/*.json
+cycles/*.csv
+cycles/*.zip
+codex-cycle-export-*.json
+codex-cycle-export-*.zip
+
+# Captured proxy log bundle (contains request metadata; never publish)
+codex-logs-bundle.zip

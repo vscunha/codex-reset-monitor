@@ -1,0 +1,27 @@
+{
+  "description": "Secondary report supplied as a pricing regression fixture",
+  "pricing_mode": "codex",
+  "models": {
+    "gpt-5.6-luna": {
+      "total_input_tokens": 102903827,
+      "cached_input_tokens": 96914176,
+      "uncached_input_tokens": 5989651,
+      "output_tokens": 434978,
+      "reported_cost_usd": "4.82034459"
+    },
+    "gpt-5.6-sol": {
+      "total_input_tokens": 3102067,
+      "cached_input_tokens": 2278528,
+      "uncached_input_tokens": 823539,
+      "output_tokens": 24309,
+      "reported_cost_usd": "9.20180780"
+    }
+  },
+  "total": {
+    "total_input_tokens": 106005894,
+    "cached_input_tokens": 99192704,
+    "uncached_input_tokens": 6813190,
+    "output_tokens": 459287,
+    "reported_cost_usd": "14.02215239"
+  }
+}

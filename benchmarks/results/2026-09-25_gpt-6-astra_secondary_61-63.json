@@ -1,0 +1,961 @@
+{
+  "capture_baseline": {
+    "accepted": 0,
+    "baseline": true,
+    "coverage_gap": false,
+    "excluded": 0,
+    "files_seen": 11,
+    "invalid": 0,
+    "records_read": 0
+  },
+  "dry_run": false,
+  "plan": {
+    "calibration_by_model": {
+      "gpt-6-astra": {
+        "intervals": 0,
+        "reason": null,
+        "rejected_mixed_intervals": 0,
+        "source": "command_line:model_override",
+        "target_tokens": "6000.0",
+        "tokens_per_point": "60000"
+      }
+    },
+    "granularity": {
+      "account_percentage_unit": "integer_percentage_point",
+      "accumulate_points": 2,
+      "chunk_tokens": 8000,
+      "fine_chunk_tokens": 2000,
+      "fine_window_fraction": "0.35",
+      "note": "Each crossing is bracketed by the request that contained it; accumulating N points divides that bracket by N.",
+      "snapshot_poll_seconds": 0.25
+    },
+    "harness": "pi",
+    "headroom_percentage_granularity": "integer_buckets",
+    "mode": "crossing",
+    "models": [
+      "gpt-6-astra"
+    ],
+    "monitor_state_modified": false,
+    "monitor_usage_log_modified": false,
+    "target_percentage_points": "0.1",
+    "target_point_is_estimated": true,
+    "token_source": "auto",
+    "window": "secondary"
+  },
+  "results": [
+    {
+      "attempts": [
+        {
+          "after_percent": "61.0",
+          "approx_prompt_tokens": 8000,
+          "attempt": 1,
+          "chunk_tokens": 8000,
+          "command": {
+            "finished_at": 1790306926.709901,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-astra"
+            ],
+            "returncode": 0,
+            "started_at": 1790306920.7931178,
+            "stderr_tail": "",
+            "stdout_bytes": 158428,
+            "timed_out": false
+          },
+          "cost_usd": "0.11562",
+          "estimated_progress_points": "0.1921666666666666666666666667",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-astra"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.11562",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 11522,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 11530,
+            "uncached_input_tokens": 11522
+          }
+        },
+        {
+          "after_percent": "61.0",
+          "approx_prompt_tokens": 8000,
+          "attempt": 2,
+          "chunk_tokens": 8000,
+          "command": {
+            "finished_at": 1790306932.9973514,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-astra"
+            ],
+            "returncode": 0,
+            "started_at": 1790306927.924285,
+            "stderr_tail": "",
+            "stdout_bytes": 158428,
+            "timed_out": false
+          },
+          "cost_usd": "0.11562",
+          "estimated_progress_points": "0.3843333333333333333333333333",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-astra"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.11562",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 11522,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 11530,
+            "uncached_input_tokens": 11522
+          }
+        },
+        {
+          "after_percent": "61.0",
+          "approx_prompt_tokens": 8000,
+          "attempt": 3,
+          "chunk_tokens": 8000,
+          "command": {
+            "finished_at": 1790306945.1176019,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-astra"
+            ],
+            "returncode": 0,
+            "started_at": 1790306933.8750317,
+            "stderr_tail": "",
+            "stdout_bytes": 158428,
+            "timed_out": false
+          },
+          "cost_usd": "0.11562",
+          "estimated_progress_points": "0.5765",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-astra"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.11562",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 11522,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 11530,
+            "uncached_input_tokens": 11522
+          }
+        },
+        {
+          "after_percent": "61.0",
+          "approx_prompt_tokens": 8000,
+          "attempt": 4,
+          "chunk_tokens": 8000,
+          "command": {
+            "finished_at": 1790306951.4212425,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-astra"
+            ],
+            "returncode": 0,
+            "started_at": 1790306946.010411,
+            "stderr_tail": "",
+            "stdout_bytes": 158428,
+            "timed_out": false
+          },
+          "cost_usd": "0.11562",
+          "estimated_progress_points": "0.7686666666666666666666666667",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-astra"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.11562",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 11522,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 11530,
+            "uncached_input_tokens": 11522
+          }
+        },
+        {
+          "after_percent": "61.0",
+          "approx_prompt_tokens": 2000,
+          "attempt": 5,
+          "chunk_tokens": 2000,
+          "command": {
+            "finished_at": 1790306957.4962401,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-astra"
+            ],
+            "returncode": 0,
+            "started_at": 1790306952.295369,
+            "stderr_tail": "",
+            "stdout_bytes": 44278,
+            "timed_out": false
+          },
+          "cost_usd": "0.03023",
+          "estimated_progress_points": "0.8185166666666666666666666667",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-astra"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.030230000000000003",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 2983,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 2991,
+            "uncached_input_tokens": 2983
+          }
+        },
+        {
+          "after_percent": "61.0",
+          "approx_prompt_tokens": 2000,
+          "attempt": 6,
+          "chunk_tokens": 2000,
+          "command": {
+            "finished_at": 1790306963.9798124,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-astra"
+            ],
+            "returncode": 0,
+            "started_at": 1790306958.3859904,
+            "stderr_tail": "",
+            "stdout_bytes": 44278,
+            "timed_out": false
+          },
+          "cost_usd": "0.03023",
+          "estimated_progress_points": "0.8683666666666666666666666667",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-astra"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.030230000000000003",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 2983,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 2991,
+            "uncached_input_tokens": 2983
+          }
+        },
+        {
+          "after_percent": "61.0",
+          "approx_prompt_tokens": 2000,
+          "attempt": 7,
+          "chunk_tokens": 2000,
+          "command": {
+            "finished_at": 1790306970.7486222,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-astra"
+            ],
+            "returncode": 0,
+            "started_at": 1790306965.0601451,
+            "stderr_tail": "",
+            "stdout_bytes": 44278,
+            "timed_out": false
+          },
+          "cost_usd": "0.03023",
+          "estimated_progress_points": "0.9182166666666666666666666667",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-astra"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.030230000000000003",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 2983,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 2991,
+            "uncached_input_tokens": 2983
+          }
+        },
+        {
+          "after_percent": "61.0",
+          "approx_prompt_tokens": 2000,
+          "attempt": 8,
+          "chunk_tokens": 2000,
+          "command": {
+            "finished_at": 1790306977.1466405,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-astra"
+            ],
+            "returncode": 0,
+            "started_at": 1790306971.5106058,
+            "stderr_tail": "",
+            "stdout_bytes": 44278,
+            "timed_out": false
+          },
+          "cost_usd": "0.03023",
+          "estimated_progress_points": "0.9680666666666666666666666667",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-astra"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.030230000000000003",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 2983,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 2991,
+            "uncached_input_tokens": 2983
+          }
+        },
+        {
+          "after_percent": "61.0",
+          "approx_prompt_tokens": 2000,
+          "attempt": 9,
+          "chunk_tokens": 2000,
+          "command": {
+            "finished_at": 1790306983.4952147,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-astra"
+            ],
+            "returncode": 0,
+            "started_at": 1790306977.919045,
+            "stderr_tail": "",
+            "stdout_bytes": 44278,
+            "timed_out": false
+          },
+          "cost_usd": "0.03023",
+          "estimated_progress_points": "1.017916666666666666666666667",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-astra"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.030230000000000003",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 2983,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 2991,
+            "uncached_input_tokens": 2983
+          }
+        },
+        {
+          "after_percent": "62.0",
+          "approx_prompt_tokens": 2000,
+          "attempt": 10,
+          "chunk_tokens": 2000,
+          "command": {
+            "finished_at": 1790306990.531105,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-astra"
+            ],
+            "returncode": 0,
+            "started_at": 1790306984.382737,
+            "stderr_tail": "",
+            "stdout_bytes": 44281,
+            "timed_out": false
+          },
+          "cost_usd": "0.03023",
+          "estimated_progress_points": "1.067766666666666666666666667",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-astra"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.030230000000000003",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 2983,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 2991,
+            "uncached_input_tokens": 2983
+          }
+        },
+        {
+          "after_percent": "62.0",
+          "approx_prompt_tokens": 8000,
+          "attempt": 11,
+          "chunk_tokens": 8000,
+          "command": {
+            "finished_at": 1790306997.0423834,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-astra"
+            ],
+            "returncode": 0,
+            "started_at": 1790306991.6505601,
+            "stderr_tail": "",
+            "stdout_bytes": 158431,
+            "timed_out": false
+          },
+          "cost_usd": "0.11562",
+          "estimated_progress_points": "1.259933333333333333333333333",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-astra"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.11562",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 11522,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 11530,
+            "uncached_input_tokens": 11522
+          }
+        },
+        {
+          "after_percent": "62.0",
+          "approx_prompt_tokens": 8000,
+          "attempt": 12,
+          "chunk_tokens": 8000,
+          "command": {
+            "finished_at": 1790307003.51784,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-astra"
+            ],
+            "returncode": 0,
+            "started_at": 1790306997.752031,
+            "stderr_tail": "",
+            "stdout_bytes": 158431,
+            "timed_out": false
+          },
+          "cost_usd": "0.11562",
+          "estimated_progress_points": "1.4521",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-astra"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.11562",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 11522,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 11530,
+            "uncached_input_tokens": 11522
+          }
+        },
+        {
+          "after_percent": "62.0",
+          "approx_prompt_tokens": 8000,
+          "attempt": 13,
+          "chunk_tokens": 8000,
+          "command": {
+            "finished_at": 1790307012.556194,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-astra"
+            ],
+            "returncode": 0,
+            "started_at": 1790307004.256484,
+            "stderr_tail": "",
+            "stdout_bytes": 158431,
+            "timed_out": false
+          },
+          "cost_usd": "0.11562",
+          "estimated_progress_points": "1.644266666666666666666666667",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-astra"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.11562",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 11522,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 11530,
+            "uncached_input_tokens": 11522
+          }
+        },
+        {
+          "after_percent": "62.0",
+          "approx_prompt_tokens": 8000,
+          "attempt": 14,
+          "chunk_tokens": 8000,
+          "command": {
+            "finished_at": 1790307019.02456,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-astra"
+            ],
+            "returncode": 0,
+            "started_at": 1790307013.758188,
+            "stderr_tail": "",
+            "stdout_bytes": 158431,
+            "timed_out": false
+          },
+          "cost_usd": "0.11562",
+          "estimated_progress_points": "1.836433333333333333333333333",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-astra"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.11562",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 11522,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 11530,
+            "uncached_input_tokens": 11522
+          }
+        },
+        {
+          "after_percent": "62.0",
+          "approx_prompt_tokens": 2000,
+          "attempt": 15,
+          "chunk_tokens": 2000,
+          "command": {
+            "finished_at": 1790307025.4973934,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-astra"
+            ],
+            "returncode": 0,
+            "started_at": 1790307019.9011426,
+            "stderr_tail": "",
+            "stdout_bytes": 44281,
+            "timed_out": false
+          },
+          "cost_usd": "0.03023",
+          "estimated_progress_points": "1.886283333333333333333333333",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-astra"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.030230000000000003",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 2983,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 2991,
+            "uncached_input_tokens": 2983
+          }
+        },
+        {
+          "after_percent": "62.0",
+          "approx_prompt_tokens": 2000,
+          "attempt": 16,
+          "chunk_tokens": 2000,
+          "command": {
+            "finished_at": 1790307032.0126238,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-astra"
+            ],
+            "returncode": 0,
+            "started_at": 1790307026.620455,
+            "stderr_tail": "",
+            "stdout_bytes": 44281,
+            "timed_out": false
+          },
+          "cost_usd": "0.03023",
+          "estimated_progress_points": "1.936133333333333333333333333",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-astra"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.030230000000000003",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 2983,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 2991,
+            "uncached_input_tokens": 2983
+          }
+        },
+        {
+          "after_percent": "62.0",
+          "approx_prompt_tokens": 2000,
+          "attempt": 17,
+          "chunk_tokens": 2000,
+          "command": {
+            "finished_at": 1790307038.047471,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-astra"
+            ],
+            "returncode": 0,
+            "started_at": 1790307032.86955,
+            "stderr_tail": "",
+            "stdout_bytes": 44281,
+            "timed_out": false
+          },
+          "cost_usd": "0.03023",
+          "estimated_progress_points": "1.985983333333333333333333333",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-astra"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.030230000000000003",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 2983,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 2991,
+            "uncached_input_tokens": 2983
+          }
+        },
+        {
+          "after_percent": "62.0",
+          "approx_prompt_tokens": 2000,
+          "attempt": 18,
+          "chunk_tokens": 2000,
+          "command": {
+            "finished_at": 1790307044.541392,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-astra"
+            ],
+            "returncode": 0,
+            "started_at": 1790307038.8588288,
+            "stderr_tail": "",
+            "stdout_bytes": 44281,
+            "timed_out": false
+          },
+          "cost_usd": "0.03023",
+          "estimated_progress_points": "2.035833333333333333333333333",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-astra"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.030230000000000003",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 2983,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 2991,
+            "uncached_input_tokens": 2983
+          }
+        },
+        {
+          "after_percent": "63.0",
+          "approx_prompt_tokens": 2000,
+          "attempt": 19,
+          "chunk_tokens": 2000,
+          "command": {
+            "finished_at": 1790307050.5759652,
+            "parse_error": null,
+            "pi_models": [
+              "gpt-6-astra"
+            ],
+            "returncode": 0,
+            "started_at": 1790307045.350069,
+            "stderr_tail": "",
+            "stdout_bytes": 44281,
+            "timed_out": false
+          },
+          "cost_usd": "0.03023",
+          "estimated_progress_points": "2.085683333333333333333333333",
+          "headroom": {
+            "diagnostics": {
+              "messages": 1,
+              "models": [
+                "gpt-6-astra"
+              ],
+              "source": "pi_usage_events"
+            },
+            "matching_records": 1,
+            "other_models": [],
+            "records": 0
+          },
+          "long_context_requests": 0,
+          "pi_cost_usd": "0.030230000000000003",
+          "snapshot_error": null,
+          "token_source": "pi",
+          "tokens": {
+            "cached_input_tokens": 0,
+            "input_tokens": 2983,
+            "output_tokens": 8,
+            "requests": 1,
+            "total_tokens": 2991,
+            "uncached_input_tokens": 2983
+          }
+        }
+      ],
+      "baseline_percent": "61.0",
+      "baseline_reset_at": 1790771551,
+      "calibration": {
+        "intervals": 0,
+        "reason": null,
+        "rejected_mixed_intervals": 0,
+        "source": "command_line:model_override",
+        "target_tokens": "6000.0",
+        "tokens_per_point": "60000"
+      },
+      "contamination_models": [],
+      "cost_complete": true,
+      "cost_usd": "1.25749",
+      "crossings": [
+        {
+          "bracket_cost_usd": "0.03023",
+          "bracket_tokens": 2991,
+          "cumulative_cost_usd": "0.64386",
+          "cumulative_tokens": 64066,
+          "delta_points": "1.0",
+          "percent": "62.0"
+        },
+        {
+          "bracket_cost_usd": "0.03023",
+          "bracket_tokens": 2991,
+          "cumulative_cost_usd": "1.25749",
+          "cumulative_tokens": 125141,
+          "delta_points": "1.0",
+          "percent": "63.0"
+        }
+      ],
+      "estimated_progress_points": "2.085683333333333333333333333",
+      "expected_tokens_per_point": "60000",
+      "final_percent": "63.0",
+      "final_reset_at": 1790771551,
+      "finished_at": "2026-09-25T03:30:51.717253+00:00",
+      "harness": "pi",
+      "long_context_requests": 0,
+      "model": "gpt-6-astra",
+      "models": {
+        "gpt-6-astra": {
+          "cached_input_tokens": 0,
+          "complete": true,
+          "input_tokens": 124989,
+          "known_cost_usd": "1.25749",
+          "long_context_requests": 0,
+          "output_tokens": 152,
+          "requests": 19,
+          "uncached_input_tokens": 124989
+        }
+      },
+      "observed_cost_per_point_usd": "0.628745",
+      "observed_delta_points": "2.0",
+      "observed_target_cost_usd": "0.0628745",
+      "observed_target_tokens": "6257.05",
+      "observed_tokens_per_point": "62570.5",
+      "pi_reported_cost_usd": "1.257490000000000033",
+      "pricing_revision": "2026-09-23",
+      "quantization_uncertainty_tokens_per_point": "2991",
+      "started_at": "2026-09-25T03:28:40.792951+00:00",
+      "status": "percentage_crossing_observed",
+      "target_percentage_points": "0.1",
+      "target_tokens": "6000.0",
+      "token_source": "pi",
+      "tokens": {
+        "cached_input_tokens": 0,
+        "input_tokens": 124989,
+        "output_tokens": 152,
+        "requests": 19,
+        "total_tokens": 125141,
+        "uncached_input_tokens": 124989
+      },
+      "window": "secondary"
+    }
+  ],
+  "schema_version": 1
+}

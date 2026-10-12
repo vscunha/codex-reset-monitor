@@ -1,0 +1,4833 @@
+{
+  "window": "secondary",
+  "cycle": "9% -> 100%",
+  "anchor_at": "2026-09-09T17:41:42+00:00",
+  "first_100_at": "2026-09-11T19:59:44+00:00",
+  "n_10min_measures": 283,
+  "unified_priced_cost_usd": "93.70203828",
+  "percentage_points": 91,
+  "full_100_estimate_usd": "102.9692728351648351648351648",
+  "cost_basis": "current_price_equivalent",
+  "pricing_basis": "uncached_input_plus_cached_input_plus_output",
+  "periods": [
+    {
+      "period_end": "2026-09-09T17:41:42+00:00",
+      "period_start": "2026-09-09T17:41:42+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T17:52:42+00:00",
+      "period_start": "2026-09-09T17:41:42+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T18:03:42+00:00",
+      "period_start": "2026-09-09T17:52:42+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 9,
+      "period_priced_cost_usd": "0.01815824",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 9,
+          "input_tokens": 161584,
+          "cached_input_tokens": 99072,
+          "uncached_input_tokens": 62512,
+          "output_tokens": 3062,
+          "cost_usd": "0.01815824",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-09T18:14:42+00:00",
+      "period_start": "2026-09-09T18:03:42+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T18:25:42+00:00",
+      "period_start": "2026-09-09T18:14:42+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T18:36:42+00:00",
+      "period_start": "2026-09-09T18:25:42+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T18:47:42+00:00",
+      "period_start": "2026-09-09T18:36:42+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T18:58:42+00:00",
+      "period_start": "2026-09-09T18:47:42+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T19:09:42+00:00",
+      "period_start": "2026-09-09T18:58:42+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 11,
+      "period_priced_cost_usd": "0.01496204",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 11,
+          "input_tokens": 213745,
+          "cached_input_tokens": 177152,
+          "uncached_input_tokens": 36593,
+          "output_tokens": 3417,
+          "cost_usd": "0.01496204",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-09T19:20:42+00:00",
+      "period_start": "2026-09-09T19:09:42+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T19:31:42+00:00",
+      "period_start": "2026-09-09T19:20:42+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T19:42:42+00:00",
+      "period_start": "2026-09-09T19:31:42+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T19:53:42+00:00",
+      "period_start": "2026-09-09T19:42:42+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T20:04:42+00:00",
+      "period_start": "2026-09-09T19:53:42+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 9,
+      "period_priced_cost_usd": "0.01217776",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 9,
+          "input_tokens": 149714,
+          "cached_input_tokens": 117248,
+          "uncached_input_tokens": 32466,
+          "output_tokens": 2783,
+          "cost_usd": "0.01217776",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-09T20:15:42+00:00",
+      "period_start": "2026-09-09T20:04:42+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T20:26:42+00:00",
+      "period_start": "2026-09-09T20:15:42+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T20:37:42+00:00",
+      "period_start": "2026-09-09T20:26:42+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T20:48:42+00:00",
+      "period_start": "2026-09-09T20:37:42+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T20:59:42+00:00",
+      "period_start": "2026-09-09T20:48:42+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T21:10:42+00:00",
+      "period_start": "2026-09-09T20:59:42+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 33,
+      "period_priced_cost_usd": "0.42071096",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 33,
+          "input_tokens": 1927638,
+          "cached_input_tokens": 925952,
+          "uncached_input_tokens": 1001686,
+          "output_tokens": 9661,
+          "cost_usd": "0.42071096",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-09T21:15:27+00:00",
+      "period_start": "2026-09-09T21:10:42+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 29,
+      "period_priced_cost_usd": "0.08155812",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 29,
+          "input_tokens": 1875775,
+          "cached_input_tokens": 1797120,
+          "uncached_input_tokens": 78655,
+          "output_tokens": 13759,
+          "cost_usd": "0.08155812",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-09T21:21:06+00:00",
+      "period_start": "2026-09-09T21:15:27+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 25,
+      "period_priced_cost_usd": "0.05935924",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 25,
+          "input_tokens": 1323785,
+          "cached_input_tokens": 1211392,
+          "uncached_input_tokens": 112393,
+          "output_tokens": 10544,
+          "cost_usd": "0.05935924",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-09T21:21:42+00:00",
+      "period_start": "2026-09-09T21:21:06+00:00",
+      "weekly_percent": 9.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 3,
+      "period_priced_cost_usd": "0.00369024",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 3,
+          "input_tokens": 130038,
+          "cached_input_tokens": 127232,
+          "uncached_input_tokens": 2806,
+          "output_tokens": 487,
+          "cost_usd": "0.00369024",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-09T21:26:04+00:00",
+      "period_start": "2026-09-09T21:21:42+00:00",
+      "weekly_percent": 10.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 18,
+      "period_priced_cost_usd": "0.04298684",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 18,
+          "input_tokens": 1214017,
+          "cached_input_tokens": 1183232,
+          "uncached_input_tokens": 30785,
+          "output_tokens": 10971,
+          "cost_usd": "0.04298684",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-09T21:32:11+00:00",
+      "period_start": "2026-09-09T21:26:04+00:00",
+      "weekly_percent": 10.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 25,
+      "period_priced_cost_usd": "0.06054740",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 25,
+          "input_tokens": 1987441,
+          "cached_input_tokens": 1949440,
+          "uncached_input_tokens": 38001,
+          "output_tokens": 11632,
+          "cost_usd": "0.06054740",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-09T21:33:01+00:00",
+      "period_start": "2026-09-09T21:32:11+00:00",
+      "weekly_percent": 10.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 6,
+      "period_priced_cost_usd": "0.01428492",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 6,
+          "input_tokens": 530181,
+          "cached_input_tokens": 523776,
+          "uncached_input_tokens": 6405,
+          "output_tokens": 2107,
+          "cost_usd": "0.01428492",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-09T21:42:16+00:00",
+      "period_start": "2026-09-09T21:33:01+00:00",
+      "weekly_percent": 10.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 36,
+      "period_priced_cost_usd": "0.10695784",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 36,
+          "input_tokens": 3385610,
+          "cached_input_tokens": 3331072,
+          "uncached_input_tokens": 54538,
+          "output_tokens": 24524,
+          "cost_usd": "0.10695784",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-09T21:43:27+00:00",
+      "period_start": "2026-09-09T21:42:16+00:00",
+      "weekly_percent": 10.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 3,
+      "period_priced_cost_usd": "0.01279480",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 3,
+          "input_tokens": 425966,
+          "cached_input_tokens": 421120,
+          "uncached_input_tokens": 4846,
+          "output_tokens": 2836,
+          "cost_usd": "0.01279480",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-09T21:52:42+00:00",
+      "period_start": "2026-09-09T21:43:27+00:00",
+      "weekly_percent": 10.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 1,
+      "period_priced_cost_usd": "0.00569428",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 1,
+          "input_tokens": 144581,
+          "cached_input_tokens": 143104,
+          "uncached_input_tokens": 1477,
+          "output_tokens": 2114,
+          "cost_usd": "0.00569428",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-09T22:03:42+00:00",
+      "period_start": "2026-09-09T21:52:42+00:00",
+      "weekly_percent": 10.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 29,
+      "period_priced_cost_usd": "0.07079940",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 29,
+          "input_tokens": 2083869,
+          "cached_input_tokens": 1989120,
+          "uncached_input_tokens": 94749,
+          "output_tokens": 10056,
+          "cost_usd": "0.07079940",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-09T22:14:42+00:00",
+      "period_start": "2026-09-09T22:03:42+00:00",
+      "weekly_percent": 10.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T22:25:42+00:00",
+      "period_start": "2026-09-09T22:14:42+00:00",
+      "weekly_percent": 10.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T22:36:42+00:00",
+      "period_start": "2026-09-09T22:25:42+00:00",
+      "weekly_percent": 10.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T22:47:42+00:00",
+      "period_start": "2026-09-09T22:36:42+00:00",
+      "weekly_percent": 10.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T22:58:42+00:00",
+      "period_start": "2026-09-09T22:47:42+00:00",
+      "weekly_percent": 10.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T23:09:42+00:00",
+      "period_start": "2026-09-09T22:58:42+00:00",
+      "weekly_percent": 10.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 11,
+      "period_priced_cost_usd": "0.01390320",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 11,
+          "input_tokens": 238452,
+          "cached_input_tokens": 208640,
+          "uncached_input_tokens": 29812,
+          "output_tokens": 3140,
+          "cost_usd": "0.01390320",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-09T23:20:42+00:00",
+      "period_start": "2026-09-09T23:09:42+00:00",
+      "weekly_percent": 10.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T23:31:42+00:00",
+      "period_start": "2026-09-09T23:20:42+00:00",
+      "weekly_percent": 10.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T23:42:42+00:00",
+      "period_start": "2026-09-09T23:31:42+00:00",
+      "weekly_percent": 10.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-09T23:53:42+00:00",
+      "period_start": "2026-09-09T23:42:42+00:00",
+      "weekly_percent": 10.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 35,
+      "period_priced_cost_usd": "0.84333512",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 35,
+          "input_tokens": 4112447,
+          "cached_input_tokens": 2220544,
+          "uncached_input_tokens": 1891903,
+          "output_tokens": 10489,
+          "cost_usd": "0.84333512",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T00:04:42+00:00",
+      "period_start": "2026-09-09T23:53:42+00:00",
+      "weekly_percent": 10.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 46,
+      "period_priced_cost_usd": "0.06655256",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 46,
+          "input_tokens": 1262014,
+          "cached_input_tokens": 1115648,
+          "uncached_input_tokens": 146366,
+          "output_tokens": 12472,
+          "cost_usd": "0.06655256",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T00:15:42+00:00",
+      "period_start": "2026-09-10T00:04:42+00:00",
+      "weekly_percent": 10.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 29,
+      "period_priced_cost_usd": "0.04513048",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 29,
+          "input_tokens": 1573940,
+          "cached_input_tokens": 1530624,
+          "uncached_input_tokens": 43316,
+          "output_tokens": 4879,
+          "cost_usd": "0.04513048",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T00:26:42+00:00",
+      "period_start": "2026-09-10T00:15:42+00:00",
+      "weekly_percent": 10.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 32,
+      "period_priced_cost_usd": "0.04936376",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 32,
+          "input_tokens": 1876360,
+          "cached_input_tokens": 1840128,
+          "uncached_input_tokens": 36232,
+          "output_tokens": 4429,
+          "cost_usd": "0.04936376",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T00:37:42+00:00",
+      "period_start": "2026-09-10T00:26:42+00:00",
+      "weekly_percent": 11.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 97,
+      "period_priced_cost_usd": "0.19398376",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 97,
+          "input_tokens": 5763092,
+          "cached_input_tokens": 5481728,
+          "uncached_input_tokens": 281364,
+          "output_tokens": 23397,
+          "cost_usd": "0.19398376",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T00:48:42+00:00",
+      "period_start": "2026-09-10T00:37:42+00:00",
+      "weekly_percent": 11.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 56,
+      "period_priced_cost_usd": "0.13488848",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 56,
+          "input_tokens": 5461750,
+          "cached_input_tokens": 5392384,
+          "uncached_input_tokens": 69366,
+          "output_tokens": 10973,
+          "cost_usd": "0.13488848",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T00:59:42+00:00",
+      "period_start": "2026-09-10T00:48:42+00:00",
+      "weekly_percent": 11.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 63,
+      "period_priced_cost_usd": "0.18792484",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 63,
+          "input_tokens": 8071715,
+          "cached_input_tokens": 7986432,
+          "uncached_input_tokens": 85283,
+          "output_tokens": 9283,
+          "cost_usd": "0.18792484",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T01:09:53+00:00",
+      "period_start": "2026-09-10T00:59:42+00:00",
+      "weekly_percent": 12.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 59,
+      "period_priced_cost_usd": "0.20473368",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 59,
+          "input_tokens": 8692128,
+          "cached_input_tokens": 8588544,
+          "uncached_input_tokens": 103584,
+          "output_tokens": 10205,
+          "cost_usd": "0.20473368",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T01:20:42+00:00",
+      "period_start": "2026-09-10T01:09:53+00:00",
+      "weekly_percent": 12.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 23,
+      "period_priced_cost_usd": "0.09435592",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 23,
+          "input_tokens": 4291844,
+          "cached_input_tokens": 4261376,
+          "uncached_input_tokens": 30468,
+          "output_tokens": 2529,
+          "cost_usd": "0.09435592",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T01:31:42+00:00",
+      "period_start": "2026-09-10T01:20:42+00:00",
+      "weekly_percent": 12.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T01:42:42+00:00",
+      "period_start": "2026-09-10T01:31:42+00:00",
+      "weekly_percent": 12.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T01:53:42+00:00",
+      "period_start": "2026-09-10T01:42:42+00:00",
+      "weekly_percent": 12.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T02:04:42+00:00",
+      "period_start": "2026-09-10T01:53:42+00:00",
+      "weekly_percent": 13.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 39,
+      "period_priced_cost_usd": "6.57151832",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 27,
+          "input_tokens": 970341,
+          "cached_input_tokens": 505344,
+          "uncached_input_tokens": 464997,
+          "output_tokens": 8334,
+          "cost_usd": "0.20635512",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 12,
+          "input_tokens": 1546752,
+          "cached_input_tokens": 831104,
+          "uncached_input_tokens": 715648,
+          "output_tokens": 7851,
+          "cost_usd": "6.3651632",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T02:15:42+00:00",
+      "period_start": "2026-09-10T02:04:42+00:00",
+      "weekly_percent": 13.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 80,
+      "period_priced_cost_usd": "0.79819436",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 54,
+          "input_tokens": 2148607,
+          "cached_input_tokens": 1977088,
+          "uncached_input_tokens": 171519,
+          "output_tokens": 30394,
+          "cost_usd": "0.11031836",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 26,
+          "input_tokens": 730635,
+          "cached_input_tokens": 672640,
+          "uncached_input_tokens": 57995,
+          "output_tokens": 9342,
+          "cost_usd": "0.6878760",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T02:26:42+00:00",
+      "period_start": "2026-09-10T02:15:42+00:00",
+      "weekly_percent": 14.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 84,
+      "period_priced_cost_usd": "0.60749180",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 69,
+          "input_tokens": 6829035,
+          "cached_input_tokens": 6538240,
+          "uncached_input_tokens": 290795,
+          "output_tokens": 32000,
+          "cost_usd": "0.22732380",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 15,
+          "input_tokens": 568697,
+          "cached_input_tokens": 553600,
+          "uncached_input_tokens": 15097,
+          "output_tokens": 4917,
+          "cost_usd": "0.3801680",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T02:37:43+00:00",
+      "period_start": "2026-09-10T02:26:42+00:00",
+      "weekly_percent": 15.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 75,
+      "period_priced_cost_usd": "0.18173940",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 75,
+          "input_tokens": 5794737,
+          "cached_input_tokens": 5669120,
+          "uncached_input_tokens": 125617,
+          "output_tokens": 36028,
+          "cost_usd": "0.18173940",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T02:40:29+00:00",
+      "period_start": "2026-09-10T02:37:43+00:00",
+      "weekly_percent": 15.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 29,
+      "period_priced_cost_usd": "0.08745848",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 29,
+          "input_tokens": 2850712,
+          "cached_input_tokens": 2769664,
+          "uncached_input_tokens": 81048,
+          "output_tokens": 13213,
+          "cost_usd": "0.08745848",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T02:48:42+00:00",
+      "period_start": "2026-09-10T02:40:29+00:00",
+      "weekly_percent": 15.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 56,
+      "period_priced_cost_usd": "0.21112492",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 55,
+          "input_tokens": 6837659,
+          "cached_input_tokens": 6620416,
+          "uncached_input_tokens": 217243,
+          "output_tokens": 29390,
+          "cost_usd": "0.21112492",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 1,
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": "0",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T02:59:02+00:00",
+      "period_start": "2026-09-10T02:48:42+00:00",
+      "weekly_percent": 16.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 91,
+      "period_priced_cost_usd": "0.28409612",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 91,
+          "input_tokens": 9256783,
+          "cached_input_tokens": 9047296,
+          "uncached_input_tokens": 209487,
+          "output_tokens": 51044,
+          "cost_usd": "0.28409612",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T03:00:36+00:00",
+      "period_start": "2026-09-10T02:59:02+00:00",
+      "weekly_percent": 16.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 18,
+      "period_priced_cost_usd": "0.14904712",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 16,
+          "input_tokens": 1766822,
+          "cached_input_tokens": 1725696,
+          "uncached_input_tokens": 41126,
+          "output_tokens": 7380,
+          "cost_usd": "0.05159512",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 2,
+          "input_tokens": 23163,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 23163,
+          "output_tokens": 240,
+          "cost_usd": "0.097452",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T03:09:42+00:00",
+      "period_start": "2026-09-10T03:00:36+00:00",
+      "weekly_percent": 16.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 88,
+      "period_priced_cost_usd": "0.41836004",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 80,
+          "input_tokens": 9551445,
+          "cached_input_tokens": 9439232,
+          "uncached_input_tokens": 112213,
+          "output_tokens": 27446,
+          "cost_usd": "0.24416244",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 8,
+          "input_tokens": 232820,
+          "cached_input_tokens": 221184,
+          "uncached_input_tokens": 11636,
+          "output_tokens": 1959,
+          "cost_usd": "0.1741976",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T03:20:42+00:00",
+      "period_start": "2026-09-10T03:09:42+00:00",
+      "weekly_percent": 17.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 96,
+      "period_priced_cost_usd": "0.36477400",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 95,
+          "input_tokens": 13998494,
+          "cached_input_tokens": 13809920,
+          "uncached_input_tokens": 188574,
+          "output_tokens": 42384,
+          "cost_usd": "0.36477400",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 1,
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": "0",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T03:31:42+00:00",
+      "period_start": "2026-09-10T03:20:42+00:00",
+      "weekly_percent": 17.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 83,
+      "period_priced_cost_usd": "0.35848696",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 81,
+          "input_tokens": 11763272,
+          "cached_input_tokens": 11646208,
+          "uncached_input_tokens": 117064,
+          "output_tokens": 27625,
+          "cost_usd": "0.28948696",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 2,
+          "input_tokens": 17215,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 17215,
+          "output_tokens": 7,
+          "cost_usd": "0.06900",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T03:42:42+00:00",
+      "period_start": "2026-09-10T03:31:42+00:00",
+      "weekly_percent": 18.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 31,
+      "period_priced_cost_usd": "0.07765720",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 31,
+          "input_tokens": 2981636,
+          "cached_input_tokens": 2945280,
+          "uncached_input_tokens": 36356,
+          "output_tokens": 9567,
+          "cost_usd": "0.07765720",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T03:53:42+00:00",
+      "period_start": "2026-09-10T03:42:42+00:00",
+      "weekly_percent": 18.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T04:04:42+00:00",
+      "period_start": "2026-09-10T03:53:42+00:00",
+      "weekly_percent": 18.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 10,
+      "period_priced_cost_usd": "0.2523062",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 5697,
+          "cached_input_tokens": 3840,
+          "uncached_input_tokens": 1857,
+          "output_tokens": 19,
+          "cost_usd": "0.0004710",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 8,
+          "input_tokens": 190226,
+          "cached_input_tokens": 158208,
+          "uncached_input_tokens": 32018,
+          "output_tokens": 3024,
+          "cost_usd": "0.2518352",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T04:15:42+00:00",
+      "period_start": "2026-09-10T04:04:42+00:00",
+      "weekly_percent": 18.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T04:26:42+00:00",
+      "period_start": "2026-09-10T04:15:42+00:00",
+      "weekly_percent": 18.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T04:37:42+00:00",
+      "period_start": "2026-09-10T04:26:42+00:00",
+      "weekly_percent": 18.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T04:48:42+00:00",
+      "period_start": "2026-09-10T04:37:42+00:00",
+      "weekly_percent": 18.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T04:59:42+00:00",
+      "period_start": "2026-09-10T04:48:42+00:00",
+      "weekly_percent": 18.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T05:10:42+00:00",
+      "period_start": "2026-09-10T04:59:42+00:00",
+      "weekly_percent": 18.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 9,
+      "period_priced_cost_usd": "0.2637126",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 5697,
+          "cached_input_tokens": 3840,
+          "uncached_input_tokens": 1857,
+          "output_tokens": 19,
+          "cost_usd": "0.0004710",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 7,
+          "input_tokens": 198445,
+          "cached_input_tokens": 156544,
+          "uncached_input_tokens": 41901,
+          "output_tokens": 1651,
+          "cost_usd": "0.2632416",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T05:21:42+00:00",
+      "period_start": "2026-09-10T05:10:42+00:00",
+      "weekly_percent": 18.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T05:32:42+00:00",
+      "period_start": "2026-09-10T05:21:42+00:00",
+      "weekly_percent": 18.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T05:43:42+00:00",
+      "period_start": "2026-09-10T05:32:42+00:00",
+      "weekly_percent": 18.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T05:54:42+00:00",
+      "period_start": "2026-09-10T05:43:42+00:00",
+      "weekly_percent": 18.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T06:05:42+00:00",
+      "period_start": "2026-09-10T05:54:42+00:00",
+      "weekly_percent": 18.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 7,
+      "period_priced_cost_usd": "0.2028670",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 5697,
+          "cached_input_tokens": 3840,
+          "uncached_input_tokens": 1857,
+          "output_tokens": 19,
+          "cost_usd": "0.0004710",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 5,
+          "input_tokens": 117665,
+          "cached_input_tokens": 80640,
+          "uncached_input_tokens": 37025,
+          "output_tokens": 1102,
+          "cost_usd": "0.2023960",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T06:16:42+00:00",
+      "period_start": "2026-09-10T06:05:42+00:00",
+      "weekly_percent": 18.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T06:27:42+00:00",
+      "period_start": "2026-09-10T06:16:42+00:00",
+      "weekly_percent": 18.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T06:38:42+00:00",
+      "period_start": "2026-09-10T06:27:42+00:00",
+      "weekly_percent": 18.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T06:49:42+00:00",
+      "period_start": "2026-09-10T06:38:42+00:00",
+      "weekly_percent": 18.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T07:00:42+00:00",
+      "period_start": "2026-09-10T06:49:42+00:00",
+      "weekly_percent": 19.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 5,
+      "period_priced_cost_usd": "0.1652842",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 10583,
+          "cached_input_tokens": 3840,
+          "uncached_input_tokens": 6743,
+          "output_tokens": 19,
+          "cost_usd": "0.0014482",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 3,
+          "input_tokens": 58750,
+          "cached_input_tokens": 23040,
+          "uncached_input_tokens": 35710,
+          "output_tokens": 589,
+          "cost_usd": "0.163836",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T07:11:42+00:00",
+      "period_start": "2026-09-10T07:00:42+00:00",
+      "weekly_percent": 19.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 4,
+      "period_priced_cost_usd": "0.1148816",
+      "models": {
+        "gpt-5.6-sol": {
+          "requests": 4,
+          "input_tokens": 118989,
+          "cached_input_tokens": 107904,
+          "uncached_input_tokens": 11085,
+          "output_tokens": 1369,
+          "cost_usd": "0.1148816",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T07:22:42+00:00",
+      "period_start": "2026-09-10T07:11:42+00:00",
+      "weekly_percent": 19.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T07:33:42+00:00",
+      "period_start": "2026-09-10T07:22:42+00:00",
+      "weekly_percent": 19.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T07:44:42+00:00",
+      "period_start": "2026-09-10T07:33:42+00:00",
+      "weekly_percent": 19.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T07:55:42+00:00",
+      "period_start": "2026-09-10T07:44:42+00:00",
+      "weekly_percent": 19.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T08:06:42+00:00",
+      "period_start": "2026-09-10T07:55:42+00:00",
+      "weekly_percent": 19.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 12,
+      "period_priced_cost_usd": "0.3445042",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 10583,
+          "cached_input_tokens": 3840,
+          "uncached_input_tokens": 6743,
+          "output_tokens": 19,
+          "cost_usd": "0.0014482",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 10,
+          "input_tokens": 292090,
+          "cached_input_tokens": 243840,
+          "uncached_input_tokens": 48250,
+          "output_tokens": 2626,
+          "cost_usd": "0.3430560",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T08:17:42+00:00",
+      "period_start": "2026-09-10T08:06:42+00:00",
+      "weekly_percent": 19.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T08:28:42+00:00",
+      "period_start": "2026-09-10T08:17:42+00:00",
+      "weekly_percent": 19.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T08:39:42+00:00",
+      "period_start": "2026-09-10T08:28:42+00:00",
+      "weekly_percent": 19.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T08:50:42+00:00",
+      "period_start": "2026-09-10T08:39:42+00:00",
+      "weekly_percent": 19.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T09:01:42+00:00",
+      "period_start": "2026-09-10T08:50:42+00:00",
+      "weekly_percent": 19.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 9,
+      "period_priced_cost_usd": "0.2540370",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 10583,
+          "cached_input_tokens": 3840,
+          "uncached_input_tokens": 6743,
+          "output_tokens": 19,
+          "cost_usd": "0.0014482",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 7,
+          "input_tokens": 166586,
+          "cached_input_tokens": 127232,
+          "uncached_input_tokens": 39354,
+          "output_tokens": 2214,
+          "cost_usd": "0.2525888",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T09:12:42+00:00",
+      "period_start": "2026-09-10T09:01:42+00:00",
+      "weekly_percent": 19.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 5,
+      "period_priced_cost_usd": "0.1225952",
+      "models": {
+        "gpt-5.6-sol": {
+          "requests": 5,
+          "input_tokens": 154982,
+          "cached_input_tokens": 149248,
+          "uncached_input_tokens": 5734,
+          "output_tokens": 1998,
+          "cost_usd": "0.1225952",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T09:23:42+00:00",
+      "period_start": "2026-09-10T09:12:42+00:00",
+      "weekly_percent": 19.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T09:34:42+00:00",
+      "period_start": "2026-09-10T09:23:42+00:00",
+      "weekly_percent": 19.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T09:45:42+00:00",
+      "period_start": "2026-09-10T09:34:42+00:00",
+      "weekly_percent": 19.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T09:56:42+00:00",
+      "period_start": "2026-09-10T09:45:42+00:00",
+      "weekly_percent": 19.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T10:07:42+00:00",
+      "period_start": "2026-09-10T09:56:42+00:00",
+      "weekly_percent": 20.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 9,
+      "period_priced_cost_usd": "0.2871018",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 10583,
+          "cached_input_tokens": 3840,
+          "uncached_input_tokens": 6743,
+          "output_tokens": 19,
+          "cost_usd": "0.0014482",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 7,
+          "input_tokens": 196822,
+          "cached_input_tokens": 149504,
+          "uncached_input_tokens": 47318,
+          "output_tokens": 1829,
+          "cost_usd": "0.2856536",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T10:18:42+00:00",
+      "period_start": "2026-09-10T10:07:42+00:00",
+      "weekly_percent": 20.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T10:29:42+00:00",
+      "period_start": "2026-09-10T10:18:42+00:00",
+      "weekly_percent": 20.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T10:40:42+00:00",
+      "period_start": "2026-09-10T10:29:42+00:00",
+      "weekly_percent": 20.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T10:51:42+00:00",
+      "period_start": "2026-09-10T10:40:42+00:00",
+      "weekly_percent": 20.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T11:02:42+00:00",
+      "period_start": "2026-09-10T10:51:42+00:00",
+      "weekly_percent": 20.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 12,
+      "period_priced_cost_usd": "0.3481826",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 10583,
+          "cached_input_tokens": 3840,
+          "uncached_input_tokens": 6743,
+          "output_tokens": 19,
+          "cost_usd": "0.0014482",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 10,
+          "input_tokens": 284153,
+          "cached_input_tokens": 233216,
+          "uncached_input_tokens": 50937,
+          "output_tokens": 2485,
+          "cost_usd": "0.3467344",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T11:13:42+00:00",
+      "period_start": "2026-09-10T11:02:42+00:00",
+      "weekly_percent": 20.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 15,
+      "period_priced_cost_usd": "0.04171184",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 15,
+          "input_tokens": 464782,
+          "cached_input_tokens": 357632,
+          "uncached_input_tokens": 107150,
+          "output_tokens": 10941,
+          "cost_usd": "0.04171184",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T11:24:42+00:00",
+      "period_start": "2026-09-10T11:13:42+00:00",
+      "weekly_percent": 21.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 77,
+      "period_priced_cost_usd": "0.31032608",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 77,
+          "input_tokens": 9611260,
+          "cached_input_tokens": 9265664,
+          "uncached_input_tokens": 345596,
+          "output_tokens": 46578,
+          "cost_usd": "0.31032608",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T11:35:43+00:00",
+      "period_start": "2026-09-10T11:24:42+00:00",
+      "weekly_percent": 21.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 72,
+      "period_priced_cost_usd": "0.54632776",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 72,
+          "input_tokens": 8853047,
+          "cached_input_tokens": 8004864,
+          "uncached_input_tokens": 848183,
+          "output_tokens": 41572,
+          "cost_usd": "0.54632776",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T11:46:42+00:00",
+      "period_start": "2026-09-10T11:35:43+00:00",
+      "weekly_percent": 21.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 39,
+      "period_priced_cost_usd": "0.06824456",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 39,
+          "input_tokens": 1564576,
+          "cached_input_tokens": 1412608,
+          "uncached_input_tokens": 151968,
+          "output_tokens": 7999,
+          "cost_usd": "0.06824456",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T11:57:42+00:00",
+      "period_start": "2026-09-10T11:46:42+00:00",
+      "weekly_percent": 21.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 68,
+      "period_priced_cost_usd": "0.23121308",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 68,
+          "input_tokens": 6395509,
+          "cached_input_tokens": 6182144,
+          "uncached_input_tokens": 213365,
+          "output_tokens": 54081,
+          "cost_usd": "0.23121308",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T12:08:42+00:00",
+      "period_start": "2026-09-10T11:57:42+00:00",
+      "weekly_percent": 22.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 61,
+      "period_priced_cost_usd": "0.51524432",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 55,
+          "input_tokens": 8370218,
+          "cached_input_tokens": 8281856,
+          "uncached_input_tokens": 88362,
+          "output_tokens": 24045,
+          "cost_usd": "0.21216352",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 6,
+          "input_tokens": 163534,
+          "cached_input_tokens": 111232,
+          "uncached_input_tokens": 52302,
+          "output_tokens": 2469,
+          "cost_usd": "0.3030808",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T12:19:42+00:00",
+      "period_start": "2026-09-10T12:08:42+00:00",
+      "weekly_percent": 22.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 19,
+      "period_priced_cost_usd": "0.11177620",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 19,
+          "input_tokens": 2709539,
+          "cached_input_tokens": 2508800,
+          "uncached_input_tokens": 200739,
+          "output_tokens": 17877,
+          "cost_usd": "0.11177620",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T12:30:42+00:00",
+      "period_start": "2026-09-10T12:19:42+00:00",
+      "weekly_percent": 22.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 1,
+      "period_priced_cost_usd": "0.01001284",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 1,
+          "input_tokens": 181853,
+          "cached_input_tokens": 180992,
+          "uncached_input_tokens": 861,
+          "output_tokens": 5184,
+          "cost_usd": "0.01001284",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T12:41:42+00:00",
+      "period_start": "2026-09-10T12:30:42+00:00",
+      "weekly_percent": 22.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T12:52:42+00:00",
+      "period_start": "2026-09-10T12:41:42+00:00",
+      "weekly_percent": 22.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T13:03:42+00:00",
+      "period_start": "2026-09-10T12:52:42+00:00",
+      "weekly_percent": 23.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 104,
+      "period_priced_cost_usd": "0.80605268",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 99,
+          "input_tokens": 14551533,
+          "cached_input_tokens": 14134784,
+          "uncached_input_tokens": 416749,
+          "output_tokens": 43268,
+          "cost_usd": "0.41796708",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 5,
+          "input_tokens": 141176,
+          "cached_input_tokens": 57344,
+          "uncached_input_tokens": 83832,
+          "output_tokens": 1491,
+          "cost_usd": "0.3880856",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T13:14:42+00:00",
+      "period_start": "2026-09-10T13:03:42+00:00",
+      "weekly_percent": 24.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 103,
+      "period_priced_cost_usd": "0.33804480",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 103,
+          "input_tokens": 10359906,
+          "cached_input_tokens": 10039040,
+          "uncached_input_tokens": 320866,
+          "output_tokens": 60909,
+          "cost_usd": "0.33804480",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T13:25:42+00:00",
+      "period_start": "2026-09-10T13:14:42+00:00",
+      "weekly_percent": 24.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 19,
+      "period_priced_cost_usd": "0.05280596",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 19,
+          "input_tokens": 1521115,
+          "cached_input_tokens": 1493248,
+          "uncached_input_tokens": 27867,
+          "output_tokens": 14473,
+          "cost_usd": "0.05280596",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T13:36:42+00:00",
+      "period_start": "2026-09-10T13:25:42+00:00",
+      "weekly_percent": 24.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T13:47:42+00:00",
+      "period_start": "2026-09-10T13:36:42+00:00",
+      "weekly_percent": 24.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T13:58:42+00:00",
+      "period_start": "2026-09-10T13:47:42+00:00",
+      "weekly_percent": 24.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T14:09:42+00:00",
+      "period_start": "2026-09-10T13:58:42+00:00",
+      "weekly_percent": 24.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 9,
+      "period_priced_cost_usd": "0.3852498",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 10583,
+          "cached_input_tokens": 3840,
+          "uncached_input_tokens": 6743,
+          "output_tokens": 19,
+          "cost_usd": "0.0014482",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 7,
+          "input_tokens": 178674,
+          "cached_input_tokens": 104704,
+          "uncached_input_tokens": 73970,
+          "output_tokens": 2302,
+          "cost_usd": "0.3838016",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T14:20:42+00:00",
+      "period_start": "2026-09-10T14:09:42+00:00",
+      "weekly_percent": 24.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T14:31:42+00:00",
+      "period_start": "2026-09-10T14:20:42+00:00",
+      "weekly_percent": 24.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T14:42:42+00:00",
+      "period_start": "2026-09-10T14:31:42+00:00",
+      "weekly_percent": 24.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 8,
+      "period_priced_cost_usd": "0.03707420",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 8,
+          "input_tokens": 482881,
+          "cached_input_tokens": 353280,
+          "uncached_input_tokens": 129601,
+          "output_tokens": 3407,
+          "cost_usd": "0.03707420",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T14:53:42+00:00",
+      "period_start": "2026-09-10T14:42:42+00:00",
+      "weekly_percent": 24.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 3,
+      "period_priced_cost_usd": "0.0034812",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 3,
+          "input_tokens": 20754,
+          "cached_input_tokens": 3840,
+          "uncached_input_tokens": 16914,
+          "output_tokens": 18,
+          "cost_usd": "0.0034812",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T15:04:42+00:00",
+      "period_start": "2026-09-10T14:53:42+00:00",
+      "weekly_percent": 25.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 56,
+      "period_priced_cost_usd": "0.49822172",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 49,
+          "input_tokens": 6432939,
+          "cached_input_tokens": 6199296,
+          "uncached_input_tokens": 233643,
+          "output_tokens": 41244,
+          "cost_usd": "0.22020732",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 7,
+          "input_tokens": 174928,
+          "cached_input_tokens": 130816,
+          "uncached_input_tokens": 44112,
+          "output_tokens": 2462,
+          "cost_usd": "0.2780144",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T15:15:42+00:00",
+      "period_start": "2026-09-10T15:04:42+00:00",
+      "weekly_percent": 25.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 25,
+      "period_priced_cost_usd": "0.09376164",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 25,
+          "input_tokens": 2546685,
+          "cached_input_tokens": 2355712,
+          "uncached_input_tokens": 190973,
+          "output_tokens": 7044,
+          "cost_usd": "0.09376164",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T15:26:42+00:00",
+      "period_start": "2026-09-10T15:15:42+00:00",
+      "weekly_percent": 26.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 135,
+      "period_priced_cost_usd": "0.47674356",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 135,
+          "input_tokens": 14425515,
+          "cached_input_tokens": 13863168,
+          "uncached_input_tokens": 562347,
+          "output_tokens": 72509,
+          "cost_usd": "0.47674356",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T15:37:42+00:00",
+      "period_start": "2026-09-10T15:26:42+00:00",
+      "weekly_percent": 27.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 144,
+      "period_priced_cost_usd": "0.48919772",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 144,
+          "input_tokens": 15027931,
+          "cached_input_tokens": 14497536,
+          "uncached_input_tokens": 530395,
+          "output_tokens": 77640,
+          "cost_usd": "0.48919772",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T15:48:42+00:00",
+      "period_start": "2026-09-10T15:37:42+00:00",
+      "weekly_percent": 27.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 94,
+      "period_priced_cost_usd": "0.37808092",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 94,
+          "input_tokens": 15043925,
+          "cached_input_tokens": 14895616,
+          "uncached_input_tokens": 148309,
+          "output_tokens": 42089,
+          "cost_usd": "0.37808092",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T15:59:42+00:00",
+      "period_start": "2026-09-10T15:48:42+00:00",
+      "weekly_percent": 27.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 13,
+      "period_priced_cost_usd": "0.06074356",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 12,
+          "input_tokens": 313099,
+          "cached_input_tokens": 246528,
+          "uncached_input_tokens": 66571,
+          "output_tokens": 1579,
+          "cost_usd": "0.02013956",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 1,
+          "input_tokens": 10151,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 10151,
+          "output_tokens": 0,
+          "cost_usd": "0.040604",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T16:10:42+00:00",
+      "period_start": "2026-09-10T15:59:42+00:00",
+      "weekly_percent": 28.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 10,
+      "period_priced_cost_usd": "0.3480466",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 10583,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 10583,
+          "output_tokens": 19,
+          "cost_usd": "0.0021394",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 8,
+          "input_tokens": 247322,
+          "cached_input_tokens": 192128,
+          "uncached_input_tokens": 55194,
+          "output_tokens": 2414,
+          "cost_usd": "0.3459072",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T16:21:42+00:00",
+      "period_start": "2026-09-10T16:10:42+00:00",
+      "weekly_percent": 28.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T16:32:42+00:00",
+      "period_start": "2026-09-10T16:21:42+00:00",
+      "weekly_percent": 28.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T16:43:42+00:00",
+      "period_start": "2026-09-10T16:32:42+00:00",
+      "weekly_percent": 28.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T16:54:42+00:00",
+      "period_start": "2026-09-10T16:43:42+00:00",
+      "weekly_percent": 28.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T17:05:42+00:00",
+      "period_start": "2026-09-10T16:54:42+00:00",
+      "weekly_percent": 28.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 8,
+      "period_priced_cost_usd": "0.2753794",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 10583,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 10583,
+          "output_tokens": 19,
+          "cost_usd": "0.0021394",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 6,
+          "input_tokens": 163149,
+          "cached_input_tokens": 114560,
+          "uncached_input_tokens": 48589,
+          "output_tokens": 1653,
+          "cost_usd": "0.2732400",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T17:16:42+00:00",
+      "period_start": "2026-09-10T17:05:42+00:00",
+      "weekly_percent": 28.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T17:27:42+00:00",
+      "period_start": "2026-09-10T17:16:42+00:00",
+      "weekly_percent": 28.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T17:38:42+00:00",
+      "period_start": "2026-09-10T17:27:42+00:00",
+      "weekly_percent": 28.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T17:49:42+00:00",
+      "period_start": "2026-09-10T17:38:42+00:00",
+      "weekly_percent": 28.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T18:00:42+00:00",
+      "period_start": "2026-09-10T17:49:42+00:00",
+      "weekly_percent": 28.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 6,
+      "period_priced_cost_usd": "0.1981362",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 10583,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 10583,
+          "output_tokens": 19,
+          "cost_usd": "0.0021394",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 4,
+          "input_tokens": 87650,
+          "cached_input_tokens": 48512,
+          "uncached_input_tokens": 39138,
+          "output_tokens": 1002,
+          "cost_usd": "0.1959968",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T18:11:42+00:00",
+      "period_start": "2026-09-10T18:00:42+00:00",
+      "weekly_percent": 28.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 2,
+      "period_priced_cost_usd": "0.0650264",
+      "models": {
+        "gpt-5.6-sol": {
+          "requests": 2,
+          "input_tokens": 75441,
+          "cached_input_tokens": 70016,
+          "uncached_input_tokens": 5425,
+          "output_tokens": 766,
+          "cost_usd": "0.0650264",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T18:22:42+00:00",
+      "period_start": "2026-09-10T18:11:42+00:00",
+      "weekly_percent": 28.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T18:33:42+00:00",
+      "period_start": "2026-09-10T18:22:42+00:00",
+      "weekly_percent": 28.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T18:44:42+00:00",
+      "period_start": "2026-09-10T18:33:42+00:00",
+      "weekly_percent": 28.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T18:55:42+00:00",
+      "period_start": "2026-09-10T18:44:42+00:00",
+      "weekly_percent": 28.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T19:06:42+00:00",
+      "period_start": "2026-09-10T18:55:42+00:00",
+      "weekly_percent": 28.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 7,
+      "period_priced_cost_usd": "0.2770490",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 10583,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 10583,
+          "output_tokens": 19,
+          "cost_usd": "0.0021394",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 5,
+          "input_tokens": 132157,
+          "cached_input_tokens": 82944,
+          "uncached_input_tokens": 49213,
+          "output_tokens": 2244,
+          "cost_usd": "0.2749096",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T19:17:42+00:00",
+      "period_start": "2026-09-10T19:06:42+00:00",
+      "weekly_percent": 28.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T19:28:42+00:00",
+      "period_start": "2026-09-10T19:17:42+00:00",
+      "weekly_percent": 28.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T19:39:42+00:00",
+      "period_start": "2026-09-10T19:28:42+00:00",
+      "weekly_percent": 28.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T19:50:42+00:00",
+      "period_start": "2026-09-10T19:39:42+00:00",
+      "weekly_percent": 28.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T20:01:42+00:00",
+      "period_start": "2026-09-10T19:50:42+00:00",
+      "weekly_percent": 29.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 10,
+      "period_priced_cost_usd": "0.3092042",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 10583,
+          "cached_input_tokens": 3840,
+          "uncached_input_tokens": 6743,
+          "output_tokens": 19,
+          "cost_usd": "0.0014482",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 8,
+          "input_tokens": 210892,
+          "cached_input_tokens": 165120,
+          "uncached_input_tokens": 45772,
+          "output_tokens": 2931,
+          "cost_usd": "0.3077560",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T20:12:42+00:00",
+      "period_start": "2026-09-10T20:01:42+00:00",
+      "weekly_percent": 29.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T20:23:42+00:00",
+      "period_start": "2026-09-10T20:12:42+00:00",
+      "weekly_percent": 29.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T20:34:42+00:00",
+      "period_start": "2026-09-10T20:23:42+00:00",
+      "weekly_percent": 29.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T20:45:42+00:00",
+      "period_start": "2026-09-10T20:34:42+00:00",
+      "weekly_percent": 29.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T20:56:42+00:00",
+      "period_start": "2026-09-10T20:45:42+00:00",
+      "weekly_percent": 29.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T21:07:42+00:00",
+      "period_start": "2026-09-10T20:56:42+00:00",
+      "weekly_percent": 29.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 8,
+      "period_priced_cost_usd": "0.3234610",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 10583,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 10583,
+          "output_tokens": 19,
+          "cost_usd": "0.0021394",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 6,
+          "input_tokens": 167480,
+          "cached_input_tokens": 114944,
+          "uncached_input_tokens": 52536,
+          "output_tokens": 3260,
+          "cost_usd": "0.3213216",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T21:18:42+00:00",
+      "period_start": "2026-09-10T21:07:42+00:00",
+      "weekly_percent": 29.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 41,
+      "period_priced_cost_usd": "0.14993572",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 41,
+          "input_tokens": 2331143,
+          "cached_input_tokens": 1881856,
+          "uncached_input_tokens": 449287,
+          "output_tokens": 18701,
+          "cost_usd": "0.14993572",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T21:29:42+00:00",
+      "period_start": "2026-09-10T21:18:42+00:00",
+      "weekly_percent": 30.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 65,
+      "period_priced_cost_usd": "0.26926748",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 65,
+          "input_tokens": 7882363,
+          "cached_input_tokens": 7563264,
+          "uncached_input_tokens": 319099,
+          "output_tokens": 45152,
+          "cost_usd": "0.26926748",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T21:40:42+00:00",
+      "period_start": "2026-09-10T21:29:42+00:00",
+      "weekly_percent": 30.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 7,
+      "period_priced_cost_usd": "0.03648232",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 7,
+          "input_tokens": 1470896,
+          "cached_input_tokens": 1454336,
+          "uncached_input_tokens": 16560,
+          "output_tokens": 3403,
+          "cost_usd": "0.03648232",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T21:51:42+00:00",
+      "period_start": "2026-09-10T21:40:42+00:00",
+      "weekly_percent": 30.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T22:02:42+00:00",
+      "period_start": "2026-09-10T21:51:42+00:00",
+      "weekly_percent": 30.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 8,
+      "period_priced_cost_usd": "0.2762282",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 10583,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 10583,
+          "output_tokens": 19,
+          "cost_usd": "0.0021394",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 6,
+          "input_tokens": 155543,
+          "cached_input_tokens": 106112,
+          "uncached_input_tokens": 49431,
+          "output_tokens": 1696,
+          "cost_usd": "0.2740888",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T22:13:42+00:00",
+      "period_start": "2026-09-10T22:02:42+00:00",
+      "weekly_percent": 30.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T22:24:42+00:00",
+      "period_start": "2026-09-10T22:13:42+00:00",
+      "weekly_percent": 30.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T22:35:42+00:00",
+      "period_start": "2026-09-10T22:24:42+00:00",
+      "weekly_percent": 30.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-10T22:46:42+00:00",
+      "period_start": "2026-09-10T22:35:42+00:00",
+      "weekly_percent": 30.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 15,
+      "period_priced_cost_usd": "0.13079504",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 15,
+          "input_tokens": 2039350,
+          "cached_input_tokens": 1681152,
+          "uncached_input_tokens": 358198,
+          "output_tokens": 21277,
+          "cost_usd": "0.13079504",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T22:57:42+00:00",
+      "period_start": "2026-09-10T22:46:42+00:00",
+      "weekly_percent": 30.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 32,
+      "period_priced_cost_usd": "0.11480292",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 32,
+          "input_tokens": 4579323,
+          "cached_input_tokens": 4545536,
+          "uncached_input_tokens": 33787,
+          "output_tokens": 14279,
+          "cost_usd": "0.11480292",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T23:08:42+00:00",
+      "period_start": "2026-09-10T22:57:42+00:00",
+      "weekly_percent": 31.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 49,
+      "period_priced_cost_usd": "0.52201436",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 43,
+          "input_tokens": 3039017,
+          "cached_input_tokens": 2827008,
+          "uncached_input_tokens": 212009,
+          "output_tokens": 16477,
+          "cost_usd": "0.11871436",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 6,
+          "input_tokens": 158040,
+          "cached_input_tokens": 76800,
+          "uncached_input_tokens": 81240,
+          "output_tokens": 2381,
+          "cost_usd": "0.4033000",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T23:19:42+00:00",
+      "period_start": "2026-09-10T23:08:42+00:00",
+      "weekly_percent": 31.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 59,
+      "period_priced_cost_usd": "0.14870976",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 59,
+          "input_tokens": 5501544,
+          "cached_input_tokens": 5415168,
+          "uncached_input_tokens": 86376,
+          "output_tokens": 19276,
+          "cost_usd": "0.14870976",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T23:30:42+00:00",
+      "period_start": "2026-09-10T23:19:42+00:00",
+      "weekly_percent": 32.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 120,
+      "period_priced_cost_usd": "0.44534992",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 120,
+          "input_tokens": 17000162,
+          "cached_input_tokens": 16695296,
+          "uncached_input_tokens": 304866,
+          "output_tokens": 42059,
+          "cost_usd": "0.44534992",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T23:41:42+00:00",
+      "period_start": "2026-09-10T23:30:42+00:00",
+      "weekly_percent": 32.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 96,
+      "period_priced_cost_usd": "0.28518064",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 96,
+          "input_tokens": 10921988,
+          "cached_input_tokens": 10776832,
+          "uncached_input_tokens": 145156,
+          "output_tokens": 33844,
+          "cost_usd": "0.28518064",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-10T23:52:42+00:00",
+      "period_start": "2026-09-10T23:41:42+00:00",
+      "weekly_percent": 32.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 33,
+      "period_priced_cost_usd": "0.05687540",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 33,
+          "input_tokens": 1922629,
+          "cached_input_tokens": 1888000,
+          "uncached_input_tokens": 34629,
+          "output_tokens": 10158,
+          "cost_usd": "0.05687540",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T00:03:42+00:00",
+      "period_start": "2026-09-10T23:52:42+00:00",
+      "weekly_percent": 32.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 27,
+      "period_priced_cost_usd": "0.32133360",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 21,
+          "input_tokens": 1308762,
+          "cached_input_tokens": 1276160,
+          "uncached_input_tokens": 32602,
+          "output_tokens": 9523,
+          "cost_usd": "0.04347120",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 6,
+          "input_tokens": 175892,
+          "cached_input_tokens": 125696,
+          "uncached_input_tokens": 50196,
+          "output_tokens": 1340,
+          "cost_usd": "0.2778624",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T00:14:42+00:00",
+      "period_start": "2026-09-11T00:03:42+00:00",
+      "weekly_percent": 33.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 46,
+      "period_priced_cost_usd": "0.19393640",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 46,
+          "input_tokens": 8443222,
+          "cached_input_tokens": 8389120,
+          "uncached_input_tokens": 54102,
+          "output_tokens": 12778,
+          "cost_usd": "0.19393640",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T00:25:42+00:00",
+      "period_start": "2026-09-11T00:14:42+00:00",
+      "weekly_percent": 33.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 61,
+      "period_priced_cost_usd": "0.13787448",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 61,
+          "input_tokens": 5126070,
+          "cached_input_tokens": 5044224,
+          "uncached_input_tokens": 81846,
+          "output_tokens": 17184,
+          "cost_usd": "0.13787448",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T00:36:42+00:00",
+      "period_start": "2026-09-11T00:25:42+00:00",
+      "weekly_percent": 33.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 21,
+      "period_priced_cost_usd": "0.06566708",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 20,
+          "input_tokens": 507333,
+          "cached_input_tokens": 441344,
+          "uncached_input_tokens": 65989,
+          "output_tokens": 2532,
+          "cost_usd": "0.02506308",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 1,
+          "input_tokens": 10151,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 10151,
+          "output_tokens": 0,
+          "cost_usd": "0.040604",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T00:47:42+00:00",
+      "period_start": "2026-09-11T00:36:42+00:00",
+      "weekly_percent": 33.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 26,
+      "period_priced_cost_usd": "0.07750464",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 26,
+          "input_tokens": 1990404,
+          "cached_input_tokens": 1905152,
+          "uncached_input_tokens": 85252,
+          "output_tokens": 18626,
+          "cost_usd": "0.07750464",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T00:58:42+00:00",
+      "period_start": "2026-09-11T00:47:42+00:00",
+      "weekly_percent": 33.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 15,
+      "period_priced_cost_usd": "0.05157576",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 15,
+          "input_tokens": 1778208,
+          "cached_input_tokens": 1730048,
+          "uncached_input_tokens": 48160,
+          "output_tokens": 6119,
+          "cost_usd": "0.05157576",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T01:09:42+00:00",
+      "period_start": "2026-09-11T00:58:42+00:00",
+      "weekly_percent": 34.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 87,
+      "period_priced_cost_usd": "0.47049336",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 79,
+          "input_tokens": 6553144,
+          "cached_input_tokens": 6336768,
+          "uncached_input_tokens": 216376,
+          "output_tokens": 41971,
+          "cost_usd": "0.22037576",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 8,
+          "input_tokens": 188181,
+          "cached_input_tokens": 148224,
+          "uncached_input_tokens": 39957,
+          "output_tokens": 1550,
+          "cost_usd": "0.2501176",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T01:20:42+00:00",
+      "period_start": "2026-09-11T01:09:42+00:00",
+      "weekly_percent": 34.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 50,
+      "period_priced_cost_usd": "0.21766124",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 48,
+          "input_tokens": 3573833,
+          "cached_input_tokens": 3304192,
+          "uncached_input_tokens": 269641,
+          "output_tokens": 13701,
+          "cost_usd": "0.13645324",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 2,
+          "input_tokens": 20302,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 20302,
+          "output_tokens": 0,
+          "cost_usd": "0.081208",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T01:31:42+00:00",
+      "period_start": "2026-09-11T01:20:42+00:00",
+      "weekly_percent": 35.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 95,
+      "period_priced_cost_usd": "0.51876100",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 91,
+          "input_tokens": 8750581,
+          "cached_input_tokens": 7982080,
+          "uncached_input_tokens": 768501,
+          "output_tokens": 35836,
+          "cost_usd": "0.35634500",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 4,
+          "input_tokens": 40604,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 40604,
+          "output_tokens": 0,
+          "cost_usd": "0.162416",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T01:42:42+00:00",
+      "period_start": "2026-09-11T01:31:42+00:00",
+      "weekly_percent": 35.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 49,
+      "period_priced_cost_usd": "0.28962100",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 47,
+          "input_tokens": 5425503,
+          "cached_input_tokens": 5047040,
+          "uncached_input_tokens": 378463,
+          "output_tokens": 26483,
+          "cost_usd": "0.20841300",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 2,
+          "input_tokens": 20302,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 20302,
+          "output_tokens": 0,
+          "cost_usd": "0.081208",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T01:52:52+00:00",
+      "period_start": "2026-09-11T01:42:42+00:00",
+      "weekly_percent": 35.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 71,
+      "period_priced_cost_usd": "0.44045348",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 67,
+          "input_tokens": 8753781,
+          "cached_input_tokens": 8337664,
+          "uncached_input_tokens": 416117,
+          "output_tokens": 23384,
+          "cost_usd": "0.27803748",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 4,
+          "input_tokens": 40604,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 40604,
+          "output_tokens": 0,
+          "cost_usd": "0.162416",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T02:03:43+00:00",
+      "period_start": "2026-09-11T01:52:52+00:00",
+      "weekly_percent": 36.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 60,
+      "period_priced_cost_usd": "1.58755312",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 43,
+          "input_tokens": 5234932,
+          "cached_input_tokens": 4662016,
+          "uncached_input_tokens": 572916,
+          "output_tokens": 12134,
+          "cost_usd": "0.22238432",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 17,
+          "input_tokens": 915758,
+          "cached_input_tokens": 659712,
+          "uncached_input_tokens": 256046,
+          "output_tokens": 3855,
+          "cost_usd": "1.3651688",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T02:14:42+00:00",
+      "period_start": "2026-09-11T02:03:43+00:00",
+      "weekly_percent": 40.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 54,
+      "period_priced_cost_usd": "4.6580156",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 6,
+          "input_tokens": 41370,
+          "cached_input_tokens": 3840,
+          "uncached_input_tokens": 37530,
+          "output_tokens": 364,
+          "cost_usd": "0.0080196",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 48,
+          "input_tokens": 8584017,
+          "cached_input_tokens": 8318720,
+          "uncached_input_tokens": 265297,
+          "output_tokens": 13066,
+          "cost_usd": "4.6499960",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T02:25:42+00:00",
+      "period_start": "2026-09-11T02:14:42+00:00",
+      "weekly_percent": 46.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 32,
+      "period_priced_cost_usd": "6.3078346",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 6,
+          "input_tokens": 41349,
+          "cached_input_tokens": 3840,
+          "uncached_input_tokens": 37509,
+          "output_tokens": 135,
+          "cost_usd": "0.0077406",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 12,
+          "input_tokens": 1439401,
+          "cached_input_tokens": 1205760,
+          "uncached_input_tokens": 233641,
+          "output_tokens": 1338,
+          "cost_usd": "1.4436280",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-6-astra": {
+          "requests": 14,
+          "input_tokens": 2723957,
+          "cached_input_tokens": 2509056,
+          "uncached_input_tokens": 214901,
+          "output_tokens": 3968,
+          "cost_usd": "4.856466",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T02:36:42+00:00",
+      "period_start": "2026-09-11T02:25:42+00:00",
+      "weekly_percent": 46.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T02:47:42+00:00",
+      "period_start": "2026-09-11T02:36:42+00:00",
+      "weekly_percent": 46.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T02:58:42+00:00",
+      "period_start": "2026-09-11T02:47:42+00:00",
+      "weekly_percent": 46.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T03:09:42+00:00",
+      "period_start": "2026-09-11T02:58:42+00:00",
+      "weekly_percent": 46.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 4,
+      "period_priced_cost_usd": "0",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": "0",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 2,
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": "0",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T03:20:42+00:00",
+      "period_start": "2026-09-11T03:09:42+00:00",
+      "weekly_percent": 46.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T03:31:42+00:00",
+      "period_start": "2026-09-11T03:20:42+00:00",
+      "weekly_percent": 46.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T03:42:42+00:00",
+      "period_start": "2026-09-11T03:31:42+00:00",
+      "weekly_percent": 46.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T03:53:42+00:00",
+      "period_start": "2026-09-11T03:42:42+00:00",
+      "weekly_percent": 46.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T04:04:42+00:00",
+      "period_start": "2026-09-11T03:53:42+00:00",
+      "weekly_percent": 46.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 10,
+      "period_priced_cost_usd": "0.01541376",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 9,
+          "input_tokens": 209364,
+          "cached_input_tokens": 163328,
+          "uncached_input_tokens": 46036,
+          "output_tokens": 2450,
+          "cost_usd": "0.01541376",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 1,
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": "0",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T04:15:42+00:00",
+      "period_start": "2026-09-11T04:04:42+00:00",
+      "weekly_percent": 47.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 37,
+      "period_priced_cost_usd": "0.32794296",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 37,
+          "input_tokens": 2599602,
+          "cached_input_tokens": 1120768,
+          "uncached_input_tokens": 1478834,
+          "output_tokens": 8134,
+          "cost_usd": "0.32794296",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T04:26:42+00:00",
+      "period_start": "2026-09-11T04:15:42+00:00",
+      "weekly_percent": 47.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 59,
+      "period_priced_cost_usd": "0.51433268",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 59,
+          "input_tokens": 2766019,
+          "cached_input_tokens": 222464,
+          "uncached_input_tokens": 2543555,
+          "output_tokens": 977,
+          "cost_usd": "0.51433268",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T04:37:42+00:00",
+      "period_start": "2026-09-11T04:26:42+00:00",
+      "weekly_percent": 49.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 28,
+      "period_priced_cost_usd": "1.67358720",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 15,
+          "input_tokens": 750794,
+          "cached_input_tokens": 60160,
+          "uncached_input_tokens": 690634,
+          "output_tokens": 257,
+          "cost_usd": "0.13963840",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 5,
+          "input_tokens": 205826,
+          "cached_input_tokens": 13184,
+          "uncached_input_tokens": 192642,
+          "output_tokens": 16,
+          "cost_usd": "0.7761616",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-terra": {
+          "requests": 8,
+          "input_tokens": 390452,
+          "cached_input_tokens": 13056,
+          "uncached_input_tokens": 377396,
+          "output_tokens": 32,
+          "cost_usd": "0.7577872",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T04:48:42+00:00",
+      "period_start": "2026-09-11T04:37:42+00:00",
+      "weekly_percent": 51.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 2,
+      "period_priced_cost_usd": "0.99626",
+      "models": {
+        "gpt-6-astra": {
+          "requests": 2,
+          "input_tokens": 99451,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 99451,
+          "output_tokens": 35,
+          "cost_usd": "0.99626",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T04:59:42+00:00",
+      "period_start": "2026-09-11T04:48:42+00:00",
+      "weekly_percent": 52.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 64,
+      "period_priced_cost_usd": "0.89155796",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 62,
+          "input_tokens": 2946671,
+          "cached_input_tokens": 297728,
+          "uncached_input_tokens": 2648943,
+          "output_tokens": 1054,
+          "cost_usd": "0.53700796",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-6-astra": {
+          "requests": 2,
+          "input_tokens": 35415,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 35415,
+          "output_tokens": 8,
+          "cost_usd": "0.35455",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T05:10:42+00:00",
+      "period_start": "2026-09-11T04:59:42+00:00",
+      "weekly_percent": 55.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 89,
+      "period_priced_cost_usd": "2.18064128",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 64,
+          "input_tokens": 2957094,
+          "cached_input_tokens": 324864,
+          "uncached_input_tokens": 2632230,
+          "output_tokens": 1067,
+          "cost_usd": "0.53422368",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 25,
+          "input_tokens": 575948,
+          "cached_input_tokens": 200704,
+          "uncached_input_tokens": 375244,
+          "output_tokens": 3258,
+          "cost_usd": "1.6464176",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T05:21:42+00:00",
+      "period_start": "2026-09-11T05:10:42+00:00",
+      "weekly_percent": 55.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T05:32:42+00:00",
+      "period_start": "2026-09-11T05:21:42+00:00",
+      "weekly_percent": 55.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T05:43:44+00:00",
+      "period_start": "2026-09-11T05:32:42+00:00",
+      "weekly_percent": 55.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T05:54:43+00:00",
+      "period_start": "2026-09-11T05:43:44+00:00",
+      "weekly_percent": 55.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T06:05:43+00:00",
+      "period_start": "2026-09-11T05:54:43+00:00",
+      "weekly_percent": 55.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 9,
+      "period_priced_cost_usd": "0.3198914",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 10583,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 10583,
+          "output_tokens": 19,
+          "cost_usd": "0.0021394",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 7,
+          "input_tokens": 194567,
+          "cached_input_tokens": 143360,
+          "uncached_input_tokens": 51207,
+          "output_tokens": 2779,
+          "cost_usd": "0.3177520",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T06:16:43+00:00",
+      "period_start": "2026-09-11T06:05:43+00:00",
+      "weekly_percent": 55.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T06:27:43+00:00",
+      "period_start": "2026-09-11T06:16:43+00:00",
+      "weekly_percent": 55.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T06:38:43+00:00",
+      "period_start": "2026-09-11T06:27:43+00:00",
+      "weekly_percent": 55.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T06:49:43+00:00",
+      "period_start": "2026-09-11T06:38:43+00:00",
+      "weekly_percent": 55.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T07:00:43+00:00",
+      "period_start": "2026-09-11T06:49:43+00:00",
+      "weekly_percent": 55.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 6,
+      "period_priced_cost_usd": "0.2293786",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 10583,
+          "cached_input_tokens": 3840,
+          "uncached_input_tokens": 6743,
+          "output_tokens": 19,
+          "cost_usd": "0.0014482",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 4,
+          "input_tokens": 97130,
+          "cached_input_tokens": 49536,
+          "uncached_input_tokens": 47594,
+          "output_tokens": 887,
+          "cost_usd": "0.2279304",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T07:11:43+00:00",
+      "period_start": "2026-09-11T07:00:43+00:00",
+      "weekly_percent": 55.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 3,
+      "period_priced_cost_usd": "0.1076528",
+      "models": {
+        "gpt-5.6-sol": {
+          "requests": 3,
+          "input_tokens": 128476,
+          "cached_input_tokens": 120192,
+          "uncached_input_tokens": 8284,
+          "output_tokens": 1322,
+          "cost_usd": "0.1076528",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T07:22:43+00:00",
+      "period_start": "2026-09-11T07:11:43+00:00",
+      "weekly_percent": 55.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T07:33:43+00:00",
+      "period_start": "2026-09-11T07:22:43+00:00",
+      "weekly_percent": 55.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T07:44:43+00:00",
+      "period_start": "2026-09-11T07:33:43+00:00",
+      "weekly_percent": 55.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T07:55:43+00:00",
+      "period_start": "2026-09-11T07:44:43+00:00",
+      "weekly_percent": 55.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T08:06:43+00:00",
+      "period_start": "2026-09-11T07:55:43+00:00",
+      "weekly_percent": 55.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 7,
+      "period_priced_cost_usd": "0.2754282",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 10583,
+          "cached_input_tokens": 3840,
+          "uncached_input_tokens": 6743,
+          "output_tokens": 19,
+          "cost_usd": "0.0014482",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 5,
+          "input_tokens": 130696,
+          "cached_input_tokens": 80640,
+          "uncached_input_tokens": 50056,
+          "output_tokens": 2075,
+          "cost_usd": "0.273980",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T08:17:43+00:00",
+      "period_start": "2026-09-11T08:06:43+00:00",
+      "weekly_percent": 55.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T08:28:43+00:00",
+      "period_start": "2026-09-11T08:17:43+00:00",
+      "weekly_percent": 55.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T08:39:43+00:00",
+      "period_start": "2026-09-11T08:28:43+00:00",
+      "weekly_percent": 55.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T08:50:43+00:00",
+      "period_start": "2026-09-11T08:39:43+00:00",
+      "weekly_percent": 55.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T09:01:43+00:00",
+      "period_start": "2026-09-11T08:50:43+00:00",
+      "weekly_percent": 56.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 9,
+      "period_priced_cost_usd": "0.2832186",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 10583,
+          "cached_input_tokens": 3840,
+          "uncached_input_tokens": 6743,
+          "output_tokens": 19,
+          "cost_usd": "0.0014482",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 7,
+          "input_tokens": 195422,
+          "cached_input_tokens": 146816,
+          "uncached_input_tokens": 48606,
+          "output_tokens": 1431,
+          "cost_usd": "0.2817704",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T09:12:43+00:00",
+      "period_start": "2026-09-11T09:01:43+00:00",
+      "weekly_percent": 56.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T09:23:43+00:00",
+      "period_start": "2026-09-11T09:12:43+00:00",
+      "weekly_percent": 56.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T09:34:43+00:00",
+      "period_start": "2026-09-11T09:23:43+00:00",
+      "weekly_percent": 56.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T09:45:43+00:00",
+      "period_start": "2026-09-11T09:34:43+00:00",
+      "weekly_percent": 56.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T09:56:43+00:00",
+      "period_start": "2026-09-11T09:45:43+00:00",
+      "weekly_percent": 56.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T10:07:43+00:00",
+      "period_start": "2026-09-11T09:56:43+00:00",
+      "weekly_percent": 56.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 10,
+      "period_priced_cost_usd": "0.3017938",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 10583,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 10583,
+          "output_tokens": 19,
+          "cost_usd": "0.0021394",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 8,
+          "input_tokens": 225577,
+          "cached_input_tokens": 178176,
+          "uncached_input_tokens": 47401,
+          "output_tokens": 1939,
+          "cost_usd": "0.2996544",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T10:18:43+00:00",
+      "period_start": "2026-09-11T10:07:43+00:00",
+      "weekly_percent": 56.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T10:29:43+00:00",
+      "period_start": "2026-09-11T10:18:43+00:00",
+      "weekly_percent": 56.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T10:40:43+00:00",
+      "period_start": "2026-09-11T10:29:43+00:00",
+      "weekly_percent": 56.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T10:51:43+00:00",
+      "period_start": "2026-09-11T10:40:43+00:00",
+      "weekly_percent": 56.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T11:02:43+00:00",
+      "period_start": "2026-09-11T10:51:43+00:00",
+      "weekly_percent": 56.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 8,
+      "period_priced_cost_usd": "0.2606962",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 10583,
+          "cached_input_tokens": 3840,
+          "uncached_input_tokens": 6743,
+          "output_tokens": 19,
+          "cost_usd": "0.0014482",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 6,
+          "input_tokens": 144772,
+          "cached_input_tokens": 102400,
+          "uncached_input_tokens": 42372,
+          "output_tokens": 2440,
+          "cost_usd": "0.2592480",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T11:13:43+00:00",
+      "period_start": "2026-09-11T11:02:43+00:00",
+      "weekly_percent": 56.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T11:24:43+00:00",
+      "period_start": "2026-09-11T11:13:43+00:00",
+      "weekly_percent": 56.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T11:35:43+00:00",
+      "period_start": "2026-09-11T11:24:43+00:00",
+      "weekly_percent": 56.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T11:46:43+00:00",
+      "period_start": "2026-09-11T11:35:43+00:00",
+      "weekly_percent": 56.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T11:57:43+00:00",
+      "period_start": "2026-09-11T11:46:43+00:00",
+      "weekly_percent": 56.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T12:08:43+00:00",
+      "period_start": "2026-09-11T11:57:43+00:00",
+      "weekly_percent": 57.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 9,
+      "period_priced_cost_usd": "0.2851594",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 10583,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 10583,
+          "output_tokens": 19,
+          "cost_usd": "0.0021394",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 7,
+          "input_tokens": 173540,
+          "cached_input_tokens": 131200,
+          "uncached_input_tokens": 42340,
+          "output_tokens": 3059,
+          "cost_usd": "0.2830200",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T12:19:43+00:00",
+      "period_start": "2026-09-11T12:08:43+00:00",
+      "weekly_percent": 57.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T12:30:43+00:00",
+      "period_start": "2026-09-11T12:19:43+00:00",
+      "weekly_percent": 57.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T12:41:43+00:00",
+      "period_start": "2026-09-11T12:30:43+00:00",
+      "weekly_percent": 57.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T12:52:43+00:00",
+      "period_start": "2026-09-11T12:41:43+00:00",
+      "weekly_percent": 57.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T13:03:21+00:00",
+      "period_start": "2026-09-11T12:52:43+00:00",
+      "weekly_percent": 58.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 23,
+      "period_priced_cost_usd": "1.6161754",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 4,
+          "input_tokens": 21145,
+          "cached_input_tokens": 3840,
+          "uncached_input_tokens": 17305,
+          "output_tokens": 40,
+          "cost_usd": "0.0035858",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 19,
+          "input_tokens": 1625641,
+          "cached_input_tokens": 1397504,
+          "uncached_input_tokens": 228137,
+          "output_tokens": 7052,
+          "cost_usd": "1.6125896",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T13:13:43+00:00",
+      "period_start": "2026-09-11T13:03:21+00:00",
+      "weekly_percent": 61.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 41,
+      "period_priced_cost_usd": "3.5240032",
+      "models": {
+        "gpt-5.6-sol": {
+          "requests": 41,
+          "input_tokens": 6548156,
+          "cached_input_tokens": 6409728,
+          "uncached_input_tokens": 138428,
+          "output_tokens": 20320,
+          "cost_usd": "3.5240032",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T13:24:46+00:00",
+      "period_start": "2026-09-11T13:13:43+00:00",
+      "weekly_percent": 67.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 141,
+      "period_priced_cost_usd": "4.97783220",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 25,
+          "input_tokens": 1003519,
+          "cached_input_tokens": 796160,
+          "uncached_input_tokens": 207359,
+          "output_tokens": 11033,
+          "cost_usd": "0.07063460",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 116,
+          "input_tokens": 7550962,
+          "cached_input_tokens": 7284864,
+          "uncached_input_tokens": 266098,
+          "output_tokens": 46443,
+          "cost_usd": "4.9071976",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T13:35:46+00:00",
+      "period_start": "2026-09-11T13:24:46+00:00",
+      "weekly_percent": 71.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 160,
+      "period_priced_cost_usd": "4.46372028",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 80,
+          "input_tokens": 8605391,
+          "cached_input_tokens": 8107264,
+          "uncached_input_tokens": 498127,
+          "output_tokens": 40184,
+          "cost_usd": "0.30999148",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 80,
+          "input_tokens": 8884873,
+          "cached_input_tokens": 8816512,
+          "uncached_input_tokens": 68361,
+          "output_tokens": 17684,
+          "cost_usd": "4.1537288",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T13:46:43+00:00",
+      "period_start": "2026-09-11T13:35:46+00:00",
+      "weekly_percent": 71.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 21,
+      "period_priced_cost_usd": "0.09053984",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 21,
+          "input_tokens": 3746770,
+          "cached_input_tokens": 3713792,
+          "uncached_input_tokens": 32978,
+          "output_tokens": 8057,
+          "cost_usd": "0.09053984",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T13:57:43+00:00",
+      "period_start": "2026-09-11T13:46:43+00:00",
+      "weekly_percent": 71.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T14:08:43+00:00",
+      "period_start": "2026-09-11T13:57:43+00:00",
+      "weekly_percent": 76.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 117,
+      "period_priced_cost_usd": "4.89021632",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 27,
+          "input_tokens": 968822,
+          "cached_input_tokens": 798976,
+          "uncached_input_tokens": 169846,
+          "output_tokens": 12327,
+          "cost_usd": "0.06474112",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 90,
+          "input_tokens": 8304670,
+          "cached_input_tokens": 7994368,
+          "uncached_input_tokens": 310302,
+          "output_tokens": 19326,
+          "cost_usd": "4.8254752",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T14:19:44+00:00",
+      "period_start": "2026-09-11T14:08:43+00:00",
+      "weekly_percent": 85.0,
+      "weekly_anchor_percent": 9.0,
+      "period_requests": 248,
+      "period_priced_cost_usd": "8.48701652",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 120,
+          "input_tokens": 11802945,
+          "cached_input_tokens": 11301376,
+          "uncached_input_tokens": 501569,
+          "output_tokens": 63136,
+          "cost_usd": "0.40210452",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 128,
+          "input_tokens": 16797638,
+          "cached_input_tokens": 16620800,
+          "uncached_input_tokens": 176838,
+          "output_tokens": 36462,
+          "cost_usd": "8.0849120",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T14:30:43+00:00",
+      "period_start": "2026-09-11T14:19:44+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 87,
+      "period_priced_cost_usd": "1.58362596",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 65,
+          "input_tokens": 10256307,
+          "cached_input_tokens": 9893888,
+          "uncached_input_tokens": 362419,
+          "output_tokens": 21631,
+          "cost_usd": "0.29631876",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 21,
+          "input_tokens": 2938698,
+          "cached_input_tokens": 2925568,
+          "uncached_input_tokens": 13130,
+          "output_tokens": 3228,
+          "cost_usd": "1.2873072",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-reserve": {
+          "requests": 1,
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": "0",
+          "complete": false,
+          "reasons": [
+            "unpriced_model"
+          ]
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T14:41:43+00:00",
+      "period_start": "2026-09-11T14:30:43+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 50,
+      "period_priced_cost_usd": "0.17349772",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 50,
+          "input_tokens": 5812979,
+          "cached_input_tokens": 5679616,
+          "uncached_input_tokens": 133363,
+          "output_tokens": 27694,
+          "cost_usd": "0.17349772",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T14:52:43+00:00",
+      "period_start": "2026-09-11T14:41:43+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 45,
+      "period_priced_cost_usd": "0.21522592",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 45,
+          "input_tokens": 8466788,
+          "cached_input_tokens": 8374016,
+          "uncached_input_tokens": 92772,
+          "output_tokens": 24326,
+          "cost_usd": "0.21522592",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T15:03:02+00:00",
+      "period_start": "2026-09-11T14:52:43+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 61,
+      "period_priced_cost_usd": "0.15655624",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 60,
+          "input_tokens": 4816184,
+          "cached_input_tokens": 4650752,
+          "uncached_input_tokens": 165432,
+          "output_tokens": 25379,
+          "cost_usd": "0.15655624",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 1,
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": "0",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T15:13:44+00:00",
+      "period_start": "2026-09-11T15:03:02+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 79,
+      "period_priced_cost_usd": "0.25633356",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 78,
+          "input_tokens": 7968411,
+          "cached_input_tokens": 7628288,
+          "uncached_input_tokens": 340123,
+          "output_tokens": 29786,
+          "cost_usd": "0.25633356",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-reserve": {
+          "requests": 1,
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": "0",
+          "complete": false,
+          "reasons": [
+            "unpriced_model"
+          ]
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T15:24:43+00:00",
+      "period_start": "2026-09-11T15:13:44+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 41,
+      "period_priced_cost_usd": "0.11912220",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 41,
+          "input_tokens": 5053545,
+          "cached_input_tokens": 5000960,
+          "uncached_input_tokens": 52585,
+          "output_tokens": 7155,
+          "cost_usd": "0.11912220",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T15:35:43+00:00",
+      "period_start": "2026-09-11T15:24:43+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 39,
+      "period_priced_cost_usd": "0.17152760",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 39,
+          "input_tokens": 5904226,
+          "cached_input_tokens": 5730560,
+          "uncached_input_tokens": 173666,
+          "output_tokens": 18486,
+          "cost_usd": "0.17152760",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T15:46:43+00:00",
+      "period_start": "2026-09-11T15:35:43+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 36,
+      "period_priced_cost_usd": "0.16791336",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 36,
+          "input_tokens": 6624486,
+          "cached_input_tokens": 6537088,
+          "uncached_input_tokens": 87398,
+          "output_tokens": 16410,
+          "cost_usd": "0.16791336",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T15:57:43+00:00",
+      "period_start": "2026-09-11T15:46:43+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 46,
+      "period_priced_cost_usd": "0.08877856",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 46,
+          "input_tokens": 2778398,
+          "cached_input_tokens": 2672128,
+          "uncached_input_tokens": 106270,
+          "output_tokens": 11735,
+          "cost_usd": "0.08877856",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T16:08:43+00:00",
+      "period_start": "2026-09-11T15:57:43+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 42,
+      "period_priced_cost_usd": "0.09458408",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 41,
+          "input_tokens": 3457492,
+          "cached_input_tokens": 3387904,
+          "uncached_input_tokens": 69588,
+          "output_tokens": 10757,
+          "cost_usd": "0.09458408",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 1,
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": "0",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T16:19:45+00:00",
+      "period_start": "2026-09-11T16:08:43+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 35,
+      "period_priced_cost_usd": "0.11669640",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 34,
+          "input_tokens": 4442682,
+          "cached_input_tokens": 4390400,
+          "uncached_input_tokens": 52282,
+          "output_tokens": 15360,
+          "cost_usd": "0.11669640",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-reserve": {
+          "requests": 1,
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": "0",
+          "complete": false,
+          "reasons": [
+            "unpriced_model"
+          ]
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T16:30:44+00:00",
+      "period_start": "2026-09-11T16:19:45+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 30,
+      "period_priced_cost_usd": "0.09428992",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 29,
+          "input_tokens": 4316336,
+          "cached_input_tokens": 4293376,
+          "uncached_input_tokens": 22960,
+          "output_tokens": 3192,
+          "cost_usd": "0.09428992",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-reserve": {
+          "requests": 1,
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": "0",
+          "complete": false,
+          "reasons": [
+            "unpriced_model"
+          ]
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T16:41:43+00:00",
+      "period_start": "2026-09-11T16:30:44+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 14,
+      "period_priced_cost_usd": "0.04894700",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 13,
+          "input_tokens": 2086393,
+          "cached_input_tokens": 2067200,
+          "uncached_input_tokens": 19193,
+          "output_tokens": 3137,
+          "cost_usd": "0.04894700",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-reserve": {
+          "requests": 1,
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": "0",
+          "complete": false,
+          "reasons": [
+            "unpriced_model"
+          ]
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T16:52:43+00:00",
+      "period_start": "2026-09-11T16:41:43+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T17:03:43+00:00",
+      "period_start": "2026-09-11T16:52:43+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 4,
+      "period_priced_cost_usd": "0",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": "0",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 2,
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": "0",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T17:14:43+00:00",
+      "period_start": "2026-09-11T17:03:43+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T17:25:43+00:00",
+      "period_start": "2026-09-11T17:14:43+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T17:36:43+00:00",
+      "period_start": "2026-09-11T17:25:43+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T17:47:43+00:00",
+      "period_start": "2026-09-11T17:36:43+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T17:58:43+00:00",
+      "period_start": "2026-09-11T17:47:43+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T18:09:43+00:00",
+      "period_start": "2026-09-11T17:58:43+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 4,
+      "period_priced_cost_usd": "0",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": "0",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 2,
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": "0",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T18:20:43+00:00",
+      "period_start": "2026-09-11T18:09:43+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T18:31:43+00:00",
+      "period_start": "2026-09-11T18:20:43+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T18:42:43+00:00",
+      "period_start": "2026-09-11T18:31:43+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T18:53:43+00:00",
+      "period_start": "2026-09-11T18:42:43+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 0,
+      "period_priced_cost_usd": "0",
+      "models": {}
+    },
+    {
+      "period_end": "2026-09-11T19:04:43+00:00",
+      "period_start": "2026-09-11T18:53:43+00:00",
+      "weekly_percent": 87.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 4,
+      "period_priced_cost_usd": "0",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": "0",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 2,
+          "input_tokens": 0,
+          "cached_input_tokens": 0,
+          "uncached_input_tokens": 0,
+          "output_tokens": 0,
+          "cost_usd": "0",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T19:15:43+00:00",
+      "period_start": "2026-09-11T19:04:43+00:00",
+      "weekly_percent": 88.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 11,
+      "period_priced_cost_usd": "1.2955170",
+      "models": {
+        "gpt-5.6-luna": {
+          "requests": 2,
+          "input_tokens": 10485,
+          "cached_input_tokens": 3840,
+          "uncached_input_tokens": 6645,
+          "output_tokens": 20,
+          "cost_usd": "0.0014298",
+          "complete": true,
+          "reasons": []
+        },
+        "gpt-5.6-sol": {
+          "requests": 9,
+          "input_tokens": 1257799,
+          "cached_input_tokens": 1063808,
+          "uncached_input_tokens": 193991,
+          "output_tokens": 4630,
+          "cost_usd": "1.2940872",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T19:26:44+00:00",
+      "period_start": "2026-09-11T19:15:43+00:00",
+      "weekly_percent": 91.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 34,
+      "period_priced_cost_usd": "4.0345488",
+      "models": {
+        "gpt-5.6-sol": {
+          "requests": 34,
+          "input_tokens": 7126711,
+          "cached_input_tokens": 6860032,
+          "uncached_input_tokens": 266679,
+          "output_tokens": 11191,
+          "cost_usd": "4.0345488",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T19:37:43+00:00",
+      "period_start": "2026-09-11T19:26:44+00:00",
+      "weekly_percent": 94.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 43,
+      "period_priced_cost_usd": "2.8585840",
+      "models": {
+        "gpt-5.6-sol": {
+          "requests": 43,
+          "input_tokens": 6083903,
+          "cached_input_tokens": 6033280,
+          "uncached_input_tokens": 50623,
+          "output_tokens": 12139,
+          "cost_usd": "2.8585840",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T19:48:43+00:00",
+      "period_start": "2026-09-11T19:37:43+00:00",
+      "weekly_percent": 98.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 70,
+      "period_priced_cost_usd": "3.1167720",
+      "models": {
+        "gpt-5.6-sol": {
+          "requests": 70,
+          "input_tokens": 5047744,
+          "cached_input_tokens": 4887040,
+          "uncached_input_tokens": 160704,
+          "output_tokens": 25957,
+          "cost_usd": "3.1167720",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    },
+    {
+      "period_end": "2026-09-11T19:59:44+00:00",
+      "period_start": "2026-09-11T19:48:43+00:00",
+      "weekly_percent": 100.0,
+      "weekly_anchor_percent": 87.0,
+      "period_requests": 39,
+      "period_priced_cost_usd": "2.1482400",
+      "models": {
+        "gpt-5.6-sol": {
+          "requests": 39,
+          "input_tokens": 3974542,
+          "cached_input_tokens": 3927680,
+          "uncached_input_tokens": 46862,
+          "output_tokens": 19486,
+          "cost_usd": "2.1482400",
+          "complete": true,
+          "reasons": []
+        }
+      }
+    }
+  ]
+}
