@@ -13,7 +13,9 @@ import re
 import shutil
 import sys
 import tempfile
-from dataclasses import dataclass
+from collections import OrderedDict
+from collections.abc import Callable
+from dataclasses import dataclass, replace as dataclass_replace
 from decimal import Decimal
 from pathlib import Path
 from typing import Any
@@ -43,6 +45,35 @@ _COST_FIELDS = (
 # can use a different boundary without changing the replay algorithm.
 DEFAULT_SCOPE_START = "2026-09-09T17:41:42+00:00"
 
+# A few recently used payloads are cached so the replay can ask a checkpoint
+# for its window details several times without re-reading the log each time.
+_PAYLOAD_CACHE: OrderedDict[tuple[str, int, int], dict[str, Any] | None] = OrderedDict()
+_PAYLOAD_CACHE_LIMIT = 4
+
+
+def _read_payload_range(path: str, offset: int, length: int) -> dict[str, Any] | None:
+    """Re-read and decode one embedded usage_v2 payload by byte range."""
+
+    key = (path, offset, length)
+    if key in _PAYLOAD_CACHE:
+        _PAYLOAD_CACHE.move_to_end(key)
+        return _PAYLOAD_CACHE[key]
+    try:
+        with open(path, "rb") as handle:
+            handle.seek(offset)
+            raw = handle.read(length)
+    except OSError:
+        return None
+    try:
+        parsed = json.loads(raw)
+    except ValueError:
+        parsed = None
+    payload = parsed if isinstance(parsed, dict) else None
+    _PAYLOAD_CACHE[key] = payload
+    while len(_PAYLOAD_CACHE) > _PAYLOAD_CACHE_LIMIT:
+        _PAYLOAD_CACHE.popitem(last=False)
+    return payload
+
 
 @dataclass(frozen=True)
 class Checkpoint:
@@ -54,18 +85,33 @@ class Checkpoint:
     secondary_percent: float | None
     balance: str | None
     payload: dict[str, Any] | None
+    # Byte range of the embedded usage_v2 JSON.  ``payload`` is left as None
+    # while scanning and re-parsed on demand so that holding every checkpoint
+    # of a multi-gigabyte log costs bytes, not gigabytes.
+    payload_path: str | None = None
+    payload_offset: int | None = None
+    payload_length: int = 0
+
+    def load_payload(self) -> dict[str, Any] | None:
+        """Return the parsed usage_v2 payload, reading it back if needed."""
+
+        if isinstance(self.payload, dict):
+            return self.payload
+        if self.payload_path is None or self.payload_offset is None or self.payload_length <= 0:
+            return None
+        return _read_payload_range(self.payload_path, self.payload_offset, self.payload_length)
 
     def window(self, name: str) -> monitor.LimitWindow | None:
         percent = self.primary_percent if name == "primary" else self.secondary_percent
         if percent is None:
             return None
+        payload = self.load_payload() or {}
         source: Any = None
-        if isinstance(self.payload, dict):
-            windows = self.payload.get("windows")
-            if isinstance(windows, dict):
-                source = windows.get(name)
-            if not isinstance(source, dict) and name == "secondary":
-                source = self.payload.get("weekly_estimate")
+        windows = payload.get("windows")
+        if isinstance(windows, dict):
+            source = windows.get(name)
+        if not isinstance(source, dict) and name == "secondary":
+            source = payload.get("weekly_estimate")
         source = source if isinstance(source, dict) else {}
         duration = _integer(source.get("window_duration_mins"))
         if duration is None:
@@ -121,7 +167,9 @@ def _parse_percent(value: str) -> float | None:
         return None
 
 
-def parse_checkpoint_line(line: str, line_number: int) -> Checkpoint | None:
+def parse_checkpoint_line(
+    line: str, line_number: int, *, parse_payload: bool = True
+) -> Checkpoint | None:
     """Parse the preserved human-readable prefix and optional old JSON."""
 
     content = line.rstrip("\n")
@@ -133,7 +181,7 @@ def parse_checkpoint_line(line: str, line_number: int) -> Checkpoint | None:
         match.group("timestamp"), "%Y-%m-%d %H:%M:%S"
     ).replace(tzinfo=dt.timezone.utc)
     payload: dict[str, Any] | None = None
-    if separator:
+    if separator and parse_payload:
         try:
             decoded = json.loads(encoded)
         except json.JSONDecodeError:
@@ -152,14 +200,39 @@ def parse_checkpoint_line(line: str, line_number: int) -> Checkpoint | None:
     )
 
 
-def read_checkpoints(path: Path) -> tuple[list[str], list[Checkpoint]]:
-    lines = path.read_text(encoding="utf-8").splitlines()
-    checkpoints = [
-        checkpoint
-        for number, line in enumerate(lines)
-        if (checkpoint := parse_checkpoint_line(line, number)) is not None
-    ]
-    return lines, checkpoints
+def read_checkpoints(path: Path) -> list[Checkpoint]:
+    """Stream the usage log and return lightweight checkpoint records.
+
+    Payloads are not decoded here: each record stores the byte range of its
+    embedded JSON and re-reads it on demand (see ``Checkpoint.load_payload``),
+    so a multi-gigabyte log no longer materialises every payload at once.
+    """
+
+    checkpoints: list[Checkpoint] = []
+    offset = 0
+    with path.open("rb") as handle:
+        for number, raw in enumerate(handle):
+            line_start = offset
+            offset += len(raw)
+            text = raw.decode("utf-8", errors="replace")
+            if text.endswith("\r\n"):
+                text = text[:-2]
+            elif text.endswith(("\n", "\r")):
+                text = text[:-1]
+            checkpoint = parse_checkpoint_line(text, number, parse_payload=False)
+            if checkpoint is None:
+                continue
+            head, separator, encoded = raw.partition(b" usage_v2=")
+            if separator:
+                checkpoint = dataclass_replace(
+                    checkpoint,
+                    line="",
+                    payload_path=str(path),
+                    payload_offset=line_start + len(head) + len(separator),
+                    payload_length=len(encoded),
+                )
+            checkpoints.append(checkpoint)
+    return checkpoints
 
 
 def _source_payload(pricing: monitor.PricingTable) -> dict[str, Any]:
@@ -245,18 +318,19 @@ def _carry_external_evidence(payload: dict[str, Any], checkpoint: "Checkpoint") 
     local record of off-VM spend, so it is carried across verbatim.
     """
 
-    previous = checkpoint.payload if isinstance(checkpoint.payload, dict) else {}
+    previous = checkpoint.load_payload() or {}
     evidence = previous.get("external_evidence")
     if isinstance(evidence, dict):
         payload["external_evidence"] = copy.deepcopy(evidence)
 
 
 def _old_estimate(checkpoint: Checkpoint, name: str) -> str | None:
-    if not isinstance(checkpoint.payload, dict):
+    payload = checkpoint.load_payload()
+    if not isinstance(payload, dict):
         return None
-    source: Any = (checkpoint.payload.get("windows") or {}).get(name)
+    source: Any = (payload.get("windows") or {}).get(name)
     if not isinstance(source, dict) and name == "secondary":
-        source = checkpoint.payload.get("weekly_estimate")
+        source = payload.get("weekly_estimate")
     if not isinstance(source, dict):
         return None
     value = source.get("full_window_usd")
@@ -302,7 +376,7 @@ def _unavailable_payload(
     raw_earliest: float | None,
 ) -> dict[str, Any]:
     previous_at = previous.captured_at if previous is not None else checkpoint.captured_at
-    original = _strip_costs(copy.deepcopy(checkpoint.payload or {}))
+    original = _strip_costs(copy.deepcopy(checkpoint.load_payload() or {}))
     payload: dict[str, Any] = original if isinstance(original, dict) else {}
     payload.update(
         {
@@ -467,7 +541,15 @@ def replay_history(
     *,
     raw_diagnostics: dict[str, Any],
     scope_start: float | None = None,
+    payload_sink: Callable[[Checkpoint, dict[str, Any]], None] | None = None,
 ) -> dict[str, Any]:
+    """Replay retained requests checkpoint by checkpoint.
+
+    ``payload_sink`` receives each rebuilt payload as it is produced.  Passing
+    one keeps the rebuilt payloads out of memory entirely, which is what makes
+    a multi-gigabyte usage log tractable; without it the payloads are returned
+    in ``result["payloads"]`` for callers that want them.
+    """
     if not checkpoints:
         raise monitor.MonitorError("Usage log contains no parseable checkpoints")
 
@@ -503,19 +585,28 @@ def replay_history(
             "requests_replayed": 0,
             "scope_start": scope_start,
         }
+    payloads: dict[int, dict[str, Any]] = {}
+    last_payload: dict[str, Any] | None = None
+
+    def emit(checkpoint: Checkpoint, payload: dict[str, Any]) -> None:
+        if payload_sink is not None:
+            payload_sink(checkpoint, payload)
+        else:
+            payloads[checkpoint.line_number] = payload
+
     if not records:
-        payloads = {
-            checkpoint.line_number: _unavailable_payload(
+        for index, checkpoint in enumerate(ordered):
+            last_payload = _unavailable_payload(
                 checkpoint,
                 ordered[index - 1] if index else None,
                 pricing,
                 reason="no_retained_headroom_requests_after_scope_start",
                 raw_earliest=None,
             )
-            for index, checkpoint in enumerate(ordered)
-        }
+            emit(checkpoint, last_payload)
         return {
             "payloads": payloads,
+            "last_payload": last_payload,
             "states": {"primary": None, "secondary": None},
             "cycles": [],
             "raw_earliest": None,
@@ -545,7 +636,6 @@ def replay_history(
         ),
         None,
     )
-    payloads: dict[int, dict[str, Any]] = {}
     if exact_index is None:
         return {
             "payloads": payloads,
@@ -708,7 +798,8 @@ def replay_history(
                 name: bool(cycle_exact[name]) for name in ("primary", "secondary")
             },
         }
-        payloads[checkpoint.line_number] = payload
+        last_payload = payload
+        emit(checkpoint, payload)
         states = new_states
         previous_snapshot = current_snapshot
         previous_at = checkpoint.captured_at
@@ -742,6 +833,7 @@ def replay_history(
         )
     return {
         "payloads": payloads,
+        "last_payload": last_payload,
         "states": states,
         "cycles": cycles,
         "raw_earliest": raw_earliest,
@@ -815,6 +907,134 @@ def render_checkpoint(checkpoint: Checkpoint, payload: dict[str, Any]) -> str:
     )
 
 
+def _line_ending(raw: bytes) -> bytes:
+    for ending in (b"\r\n", b"\n", b"\r"):
+        if raw.endswith(ending):
+            return ending
+    return b""
+
+
+class _StreamingLogRewrite:
+    """Rewrite selected usage-log lines through a temporary file.
+
+    The log is read and written one line at a time, so peak memory is bounded
+    by the pending replacements rather than by the size of the log.  The
+    original file is replaced atomically only in ``finish()``; ``abort()``
+    leaves it untouched.
+    """
+
+    def __init__(self, path: Path) -> None:
+        self.path = path
+        self.count = 0
+        self.first_line: int | None = None
+        self._source = None
+        self._target = None
+        self._temporary: Path | None = None
+        self._pending: dict[int, tuple[Checkpoint, dict[str, Any]]] = {}
+        self._next_line = 0
+        self._started = False
+
+    def start(self) -> _StreamingLogRewrite:
+        # Both handles are long-lived by design: the rewrite streams from them
+        # until finish() or abort() closes them.
+        self._source = self.path.open("rb")
+        handle = tempfile.NamedTemporaryFile(  # noqa: SIM115
+            mode="wb",
+            prefix=f".{self.path.name}.",
+            suffix=".tmp",
+            dir=self.path.parent,
+            delete=False,
+        )
+        self._temporary = Path(handle.name)
+        self._target = handle
+        self._started = True
+        return self
+
+    # -- emission ---------------------------------------------------------
+    def emit(self, checkpoint: Checkpoint, payload: dict[str, Any]) -> None:
+        if not isinstance(payload, dict):
+            return
+        line_number = checkpoint.line_number
+        if line_number < self._next_line:
+            raise monitor.MonitorError(
+                "Backfill produced an out-of-order replacement for "
+                f"usage-log line {line_number + 1}"
+            )
+        self._pending[line_number] = (checkpoint, payload)
+        self._flush_until(line_number)
+
+    def _write_replacement(
+        self, entry: tuple[Checkpoint, dict[str, Any]], raw: bytes
+    ) -> None:
+        checkpoint, payload = entry
+        rendered = render_checkpoint(checkpoint, payload).encode("utf-8")
+        self._target.write(rendered + _line_ending(raw))
+        self.count += 1
+        if self.first_line is None:
+            self.first_line = checkpoint.line_number
+
+    def _write_line(self, raw: bytes) -> None:
+        entry = self._pending.pop(self._next_line, None)
+        if entry is None:
+            # Untouched lines are copied byte for byte, which is what keeps
+            # everything before the scope boundary identical.
+            self._target.write(raw)
+        else:
+            self._write_replacement(entry, raw)
+        self._next_line += 1
+
+    def _flush_until(self, limit: int) -> None:
+        while self._next_line < limit:
+            raw = self._source.readline()
+            if not raw:
+                raise monitor.MonitorError(
+                    "Usage log changed while preparing the backfill"
+                )
+            self._write_line(raw)
+
+    # -- lifecycle --------------------------------------------------------
+    def finish(self) -> tuple[Path | None, int, int]:
+        if not self._started:
+            return None, 0, 0
+        while True:
+            raw = self._source.readline()
+            if not raw:
+                break
+            self._write_line(raw)
+        if self._pending:
+            raise monitor.MonitorError("Usage log changed while preparing the backfill")
+        if not self.count:
+            return None, 0, 0
+        self._source.close()
+        self._target.flush()
+        os.fsync(self._target.fileno())
+        self._target.close()
+        mode = self.path.stat().st_mode & 0o777
+        os.chmod(self._temporary, mode)
+        backup = _backup_path(self.path, "before-backfill")
+        shutil.copy2(self.path, backup)
+        self._temporary.replace(self.path)
+        self._started = False
+        return backup, self.count, int(self.first_line or 0)
+
+    def abort(self) -> None:
+        for handle in (self._source, self._target):
+            try:
+                if handle is not None:
+                    handle.close()
+            except OSError:
+                pass
+        self._source = None
+        self._target = None
+        if self._temporary is not None:
+            try:
+                self._temporary.unlink()
+            except OSError:
+                pass
+            self._temporary = None
+        self._started = False
+
+
 def rewrite_usage_log(
     path: Path,
     checkpoints: list[Checkpoint],
@@ -825,61 +1045,29 @@ def rewrite_usage_log(
     The human-readable prefix is reconstructed from the parsed checkpoint, so
     timestamps and percentages remain the original observations.  Lines not
     selected by ``payloads`` are copied as bytes, including all pre-restart
-    lines and their old payloads.
+    lines and their old payloads.  Both directions stream, so a multi-gigabyte
+    log is never held in memory.
     """
 
-    original = path.read_bytes()
-    byte_lines = original.splitlines(keepends=True)
-    checkpoint_by_line = {checkpoint.line_number: checkpoint for checkpoint in checkpoints}
-    replacements: dict[int, bytes] = {}
-    for line_number, payload in payloads.items():
-        checkpoint = checkpoint_by_line.get(line_number)
-        if checkpoint is None:
-            continue
-        old = byte_lines[line_number] if line_number < len(byte_lines) else b""
-        ending = b""
-        if old.endswith(b"\r\n"):
-            ending = b"\r\n"
-        elif old.endswith(b"\n"):
-            ending = b"\n"
-        elif old.endswith(b"\r"):
-            ending = b"\r"
-        replacements[line_number] = (render_checkpoint(checkpoint, payload) + "\n").encode(
-            "utf-8"
-        )
-        if ending != b"\n":
-            replacements[line_number] = (
-                render_checkpoint(checkpoint, payload).encode("utf-8") + ending
-            )
-
-    if not replacements:
+    if not payloads:
         return None, 0, 0
-    if len(byte_lines) < max(replacements) + 1:
-        raise monitor.MonitorError("Usage log changed while preparing the backfill")
+    checkpoint_by_line = {checkpoint.line_number: checkpoint for checkpoint in checkpoints}
+    selected = [
+        (checkpoint_by_line[line_number], payloads[line_number])
+        for line_number in sorted(payloads)
+        if line_number in checkpoint_by_line
+    ]
+    if not selected:
+        return None, 0, 0
 
-    rewritten = b"".join(
-        replacements.get(number, line)
-        for number, line in enumerate(byte_lines)
-    )
-    first_replaced = min(replacements)
-    if rewritten[: sum(len(line) for line in byte_lines[:first_replaced])] != original[
-        : sum(len(line) for line in byte_lines[:first_replaced])
-    ]:
-        raise monitor.MonitorError("Backfill would alter usage-log data before the scope boundary")
-
-    backup = _backup_path(path, "before-backfill")
-    shutil.copy2(path, backup)
-    mode = path.stat().st_mode & 0o777
-    with tempfile.NamedTemporaryFile(
-        mode="wb", prefix=f".{path.name}.", suffix=".tmp", dir=path.parent, delete=False
-    ) as handle:
-        temporary = Path(handle.name)
-        handle.write(rewritten)
-        handle.flush()
-        os.fsync(handle.fileno())
-    os.chmod(temporary, mode)
-    temporary.replace(path)
-    return backup, len(replacements), first_replaced
+    rewriter = _StreamingLogRewrite(path).start()
+    try:
+        for checkpoint, payload in selected:
+            rewriter.emit(checkpoint, payload)
+        return rewriter.finish()
+    except BaseException:
+        rewriter.abort()
+        raise
 
 
 def _timestamped(value: Any) -> str | None:
@@ -1071,7 +1259,11 @@ def build_final_state(
         "limit_id", os.getenv("CODEX_LIMIT_ID", "codex")
     )
     accounting["last_sample_at"] = latest.captured_at
-    latest_payload = result.get("payloads", {}).get(latest.line_number) or {}
+    latest_payload = (
+        result.get("last_payload")
+        or result.get("payloads", {}).get(latest.line_number)
+        or {}
+    )
     accounting["last_period_id"] = latest_payload.get("period_id")
     accounting["cursor"] = copy.deepcopy(
         previous_accounting.get("cursor") or monitor._empty_cursor()
@@ -1146,6 +1338,11 @@ def print_report(report: dict[str, Any]) -> None:
 def run_backfill(args: argparse.Namespace) -> dict[str, Any]:
     monitor.load_env_file(args.env_file)
     usage_log = args.usage_log.expanduser()
+    if usage_log.suffix == ".gz":
+        raise monitor.MonitorError(
+            f"{usage_log} is a gzip archive; decompress it first "
+            f"(gunzip -k {usage_log}) and point --usage-log at the result"
+        )
     state_path = args.state_path.expanduser()
     pricing_path = Path(
         os.getenv("MODEL_PRICING_FILE", "").strip() or monitor.default_pricing_path()
@@ -1154,8 +1351,7 @@ def run_backfill(args: argparse.Namespace) -> dict[str, Any]:
     scope_start = parse_timestamp(args.start)
 
     with monitor.state_lock(state_path):
-        lines, checkpoints = read_checkpoints(usage_log)
-        del lines  # The rewrite reads bytes again to preserve untouched lines.
+        checkpoints = read_checkpoints(usage_log)
         in_scope = [
             checkpoint
             for checkpoint in checkpoints
@@ -1179,30 +1375,58 @@ def run_backfill(args: argparse.Namespace) -> dict[str, Any]:
             client=client,
             timezone_name=timezone_name,
         )
-        result = replay_history(
-            checkpoints,
-            records,
-            pricing,
-            raw_diagnostics=diagnostics,
-            scope_start=scope_start,
-        )
-        result["raw_diagnostics"] = diagnostics
-        report = build_report(
-            result,
-            checkpoints,
-            records,
-            pricing,
-            scope_start=scope_start,
-            raw_diagnostics=diagnostics,
-            usage_log=usage_log,
-            state_path=state_path,
-        )
+        # The rewrite consumes rebuilt payloads as the replay produces them,
+        # so neither the payloads nor the source lines are ever accumulated.
+        rewriter: _StreamingLogRewrite | None = None
+        counted = {"payloads": 0}
 
-        previous_snapshot, previous_accounting = monitor.load_state_bundle(state_path)
-        if not args.dry_run:
-            usage_backup, rewritten, first_line = rewrite_usage_log(
-                usage_log, checkpoints, result.get("payloads", {})
+        def _count_sink(checkpoint: Checkpoint, payload: dict[str, Any]) -> None:
+            counted["payloads"] += 1
+
+        if args.dry_run:
+            sink: Callable[[Checkpoint, dict[str, Any]], None] = _count_sink
+        else:
+            rewriter = _StreamingLogRewrite(usage_log).start()
+            sink = rewriter.emit
+        try:
+            result = replay_history(
+                checkpoints,
+                records,
+                pricing,
+                raw_diagnostics=diagnostics,
+                scope_start=scope_start,
+                payload_sink=sink,
             )
+        except BaseException:
+            if rewriter is not None:
+                rewriter.abort()
+            raise
+        try:
+            result["raw_diagnostics"] = diagnostics
+            report = build_report(
+                result,
+                checkpoints,
+                records,
+                pricing,
+                scope_start=scope_start,
+                raw_diagnostics=diagnostics,
+                usage_log=usage_log,
+                state_path=state_path,
+            )
+            previous_snapshot, previous_accounting = monitor.load_state_bundle(state_path)
+        except BaseException:
+            # The temporary rewrite file must never be left behind.
+            if rewriter is not None:
+                rewriter.abort()
+            raise
+        if not args.dry_run:
+            assert rewriter is not None
+            try:
+                usage_backup, rewritten, first_line = rewriter.finish()
+            except BaseException:
+                rewriter.abort()
+                raise
+            rewriter = None  # committed; nothing left to abort
             final_snapshot, final_accounting = build_final_state(
                 previous_snapshot,
                 previous_accounting,
@@ -1222,6 +1446,8 @@ def run_backfill(args: argparse.Namespace) -> dict[str, Any]:
             report["first_rewritten_line_zero_based"] = first_line
         else:
             report["dry_run"] = True
+            report["checkpoints_corrected"] = counted["payloads"]
+            report["first_rewritten_line_zero_based"] = 0
 
         report_path = args.report_path
         if report_path is None:

@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 import contextlib
 import datetime as dt
+import gzip
 import hashlib
 import json
 import logging
@@ -17,6 +18,7 @@ import os
 import queue
 import re
 import shlex
+import shutil
 import smtplib
 import ssl
 import subprocess
@@ -30,7 +32,7 @@ from dataclasses import asdict, dataclass
 from decimal import Decimal, InvalidOperation
 from email.message import EmailMessage
 from pathlib import Path
-from typing import Any, Collection, Iterable
+from typing import Any, Collection, Iterable, Iterator
 
 try:
     import fcntl
@@ -2890,25 +2892,481 @@ def _pending_path(state_path: Path) -> Path:
     return state_path.with_suffix(state_path.suffix + ".pending")
 
 
-def _append_usage_line_once(path: Path, line: str, period_id: str | None = None) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    if period_id and path.exists():
+# ---------------------------------------------------------------------------
+# usage.log storage
+#
+# Every poll appends one line with a multi-hundred-kilobyte usage_v2 JSON
+# payload, so the log grows by tens of megabytes per day and had reached
+# multiple gigabytes.  The previous implementation called read_text() on it
+# twice per check (once to deduplicate a period id, once to backfill older
+# state), which allocated several gigabytes of RAM on an 8 GB VM.  Everything
+# below reads the file through bounded tail reads or a streaming iterator.
+# ---------------------------------------------------------------------------
+
+_MIB = 1024 * 1024
+
+
+def _env_int(name: str, default: int, *, minimum: int = 0) -> int:
+    """Read an integer tunable, falling back to ``default`` when unusable."""
+
+    raw = os.getenv(name)
+    if raw is None or not str(raw).strip():
+        return default
+    try:
+        value = int(str(raw).strip())
+    except (TypeError, ValueError):
+        LOG.warning("Ignoring invalid %s=%r; using %d", name, raw, default)
+        return default
+    if value < minimum:
+        LOG.warning("Ignoring out-of-range %s=%r; using %d", name, raw, default)
+        return default
+    return value
+
+
+@dataclass(frozen=True)
+class UsageLogPolicy:
+    """Bounded on-disk policy for the append-only usage log."""
+
+    # Rotate once the active log reaches this size (0 disables size rotation).
+    max_bytes: int = 50 * _MIB
+    # Keep this many rotated archives (usage.log.1, usage.log.2.gz, ...).
+    max_backups: int = 5
+    # Only this much of the file tail is scanned to deduplicate a period id.
+    tail_bytes: int = 4 * _MIB
+    # A log larger than this is archived wholesale and started fresh.
+    archive_threshold_bytes: int = 100 * _MIB
+    # Rotate on age as well (0 disables age rotation).
+    max_age_seconds: int = 0
+    # gzip rotated archives older than usage.log.1.
+    compress_backups: bool = True
+    # Retain this many migration archives (usage.log.bak-<timestamp>.gz).
+    archive_keep: int = 5
+    # 1..9; the default is deliberately fast: archiving a multi-GB log is
+    # I/O bound on this VM and the archive is cold storage, not a hot path.
+    archive_compress_level: int = 1
+
+
+def usage_log_policy() -> UsageLogPolicy:
+    """Resolve the log policy from the environment (config.env friendly)."""
+
+    defaults = UsageLogPolicy()
+    compress_raw = os.getenv("USAGE_LOG_COMPRESS_BACKUPS")
+    compress = defaults.compress_backups
+    if compress_raw is not None and str(compress_raw).strip():
+        compress = str(compress_raw).strip().lower() not in {"0", "false", "no", "off"}
+    return UsageLogPolicy(
+        max_bytes=_env_int("USAGE_LOG_MAX_BYTES", defaults.max_bytes, minimum=0),
+        max_backups=_env_int("USAGE_LOG_MAX_BACKUPS", defaults.max_backups, minimum=0),
+        tail_bytes=_env_int("USAGE_LOG_TAIL_BYTES", defaults.tail_bytes, minimum=4096),
+        archive_threshold_bytes=_env_int(
+            "USAGE_LOG_ARCHIVE_THRESHOLD_BYTES", defaults.archive_threshold_bytes, minimum=0
+        ),
+        max_age_seconds=_env_int("USAGE_LOG_MAX_AGE_SECONDS", defaults.max_age_seconds, minimum=0),
+        compress_backups=compress,
+        archive_keep=_env_int("USAGE_LOG_ARCHIVE_KEEP", defaults.archive_keep, minimum=0),
+        archive_compress_level=_env_int(
+            "USAGE_LOG_ARCHIVE_COMPRESS_LEVEL", defaults.archive_compress_level, minimum=0
+        ),
+    )
+
+
+@contextlib.contextmanager
+def _usage_log_lock(path: Path):
+    """Serialize rotation and appends.
+
+    Rotating renames the active file, so the lock lives in a dedicated
+    sibling: locking the log itself would let a second process keep appending
+    to the renamed inode.
+    """
+
+    lock_path = path.with_name(path.name + ".lock")
+    lock_path.parent.mkdir(parents=True, exist_ok=True)
+    handle = lock_path.open("a+", encoding="utf-8")
+    try:
+        if fcntl is not None:
+            fcntl.flock(handle.fileno(), fcntl.LOCK_EX)
+        yield
+    finally:
+        if fcntl is not None:
+            fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
+        handle.close()
+
+
+def _sibling(path: Path, suffix: str) -> Path:
+    return path.with_name(path.name + suffix)
+
+
+def _iter_usage_log_tail_lines(path: Path, tail_bytes: int) -> Iterator[str]:
+    """Yield the last ``tail_bytes`` of ``path`` as lines, oldest first.
+
+    Only the requested tail is read, so memory is bounded by ``tail_bytes``
+    instead of by the file size.
+    """
+
+    if tail_bytes <= 0:
+        return
+    try:
+        size = path.stat().st_size
+    except OSError:
+        return
+    if size <= 0:
+        return
+    start = max(0, size - tail_bytes)
+    try:
+        with path.open("rb") as handle:
+            handle.seek(start)
+            chunk = handle.read()
+    except OSError:
+        return
+    lines = chunk.splitlines()
+    if start > 0 and lines:
+        # The first element is a fragment of a line that begins before the
+        # window, so it cannot be parsed and must be dropped.
+        lines = lines[1:]
+    for raw in lines:
+        yield raw.decode("utf-8", errors="replace")
+
+
+def _usage_log_has_period(path: Path, period_id: str, tail_bytes: int) -> bool:
+    """Look for ``period_id`` in the recent tail of the active log (and .1).
+
+    Deduplication only ever matters for the period that was logged moments
+    ago.  Checking the rotated predecessor as well keeps that guarantee across
+    a rotation boundary without ever scanning the whole file.
+    """
+
+    needles = (f'"period_id":"{period_id}"', f'"period_id": "{period_id}"')
+    for candidate in (path, _sibling(path, ".1")):
+        if not candidate.exists():
+            continue
+        for line in _iter_usage_log_tail_lines(candidate, tail_bytes):
+            if any(needle in line for needle in needles):
+                return True
+    return False
+
+
+def _compress_file(source: Path, destination: Path, level: int = 1) -> None:
+    """gzip ``source`` into ``destination`` in constant memory, then unlink it."""
+
+    temporary = destination.with_name(destination.name + ".tmp")
+    try:
+        with source.open("rb") as stream_in, gzip.open(
+            temporary, "wb", compresslevel=max(1, min(9, level))
+        ) as stream_out:
+            shutil.copyfileobj(stream_in, stream_out, length=_MIB)
+        os.chmod(temporary, 0o600)
+        temporary.replace(destination)
+    except BaseException:
+        with contextlib.suppress(OSError):
+            temporary.unlink()
+        raise
+    with contextlib.suppress(OSError):
+        source.unlink()
+
+
+def _backup_index(candidate: Path, base_name: str) -> int | None:
+    match = re.fullmatch(re.escape(base_name) + r"\.(\d+)(?:\.gz)?", candidate.name)
+    if match is None:
+        return None
+    return int(match.group(1))
+
+
+def _usage_log_needs_rotation(
+    path: Path, policy: UsageLogPolicy, now: float | None = None
+) -> bool:
+    try:
+        stat = path.stat()
+    except OSError:
+        return False
+    if stat.st_size <= 0:
+        return False
+    if policy.max_bytes > 0 and stat.st_size >= policy.max_bytes:
+        return True
+    if policy.max_age_seconds > 0:
+        moment = time.time() if now is None else now
+        return (moment - stat.st_mtime) >= policy.max_age_seconds
+    return False
+
+
+def _rotate_usage_log_locked(path: Path, policy: UsageLogPolicy) -> bool:
+    """Shift ``usage.log`` through ``.1 .. .N``; caller holds the log lock."""
+
+    try:
+        stat = path.stat()
+    except OSError:
+        return False
+    if stat.st_size <= 0:
+        return False
+
+    limit = max(0, policy.max_backups)
+    if limit == 0:
+        with contextlib.suppress(OSError):
+            path.unlink()
+        return True
+
+    # Drop anything outside the retention window before shifting so a slow
+    # rotation never accumulates unbounded archives.
+    for candidate in list(path.parent.glob(path.name + ".*")):
+        index = _backup_index(candidate, path.name)
+        if index is not None and index > limit:
+            with contextlib.suppress(OSError):
+                candidate.unlink()
+
+    for index in range(limit - 1, 0, -1):
+        plain = _sibling(path, f".{index}")
+        compressed = _sibling(path, f".{index}.gz")
+        if policy.compress_backups:
+            target = _sibling(path, f".{index + 1}.gz")
+            if compressed.exists():
+                compressed.replace(target)
+            elif plain.exists():
+                try:
+                    _compress_file(plain, target, policy.archive_compress_level)
+                except OSError as exc:
+                    LOG.warning("Could not compress %s: %s", plain, exc)
+                    plain.replace(_sibling(path, f".{index + 1}"))
+        else:
+            if plain.exists():
+                plain.replace(_sibling(path, f".{index + 1}"))
+            elif compressed.exists():
+                compressed.replace(_sibling(path, f".{index + 1}.gz"))
+
+    # The previous active log stays uncompressed as .1: a fresh rotation can
+    # still deduplicate a period id that only exists in that file.
+    os.replace(path, _sibling(path, ".1"))
+    return True
+
+
+def rotate_usage_log(path: Path, policy: UsageLogPolicy | None = None) -> bool:
+    """Rotate ``usage.log`` when it exceeds the configured size or age."""
+
+    policy = policy or usage_log_policy()
+    if not path.exists() or not _usage_log_needs_rotation(path, policy):
+        return False
+    with _usage_log_lock(path):
+        if not _usage_log_needs_rotation(path, policy):
+            return False
+        return _rotate_usage_log_locked(path, policy)
+
+
+def _prune_usage_log_archives(path: Path, keep: int) -> None:
+    """Keep only the newest ``keep`` ``usage.log.bak-*.gz`` archives."""
+
+    keep = max(0, keep)
+    candidates = sorted(
+        candidate
+        for candidate in path.parent.glob(path.name + ".bak-*")
+        if re.fullmatch(re.escape(path.name) + r"\.bak-[^/]+", candidate.name)
+    )
+    for candidate in candidates[: max(0, len(candidates) - keep)]:
+        with contextlib.suppress(OSError):
+            candidate.unlink()
+
+
+def archive_oversized_usage_log(
+    path: Path,
+    threshold_bytes: int | None = None,
+    policy: UsageLogPolicy | None = None,
+) -> Path | None:
+    """One-shot migration for an already-bloated log.
+
+    The active file is renamed away and replaced with an empty log while the
+    lock is held (so no append is lost), then compressed outside the lock so
+    a multi-gigabyte archive does not stall other checks.  Returns the archive
+    path when a migration happened.
+    """
+
+    policy = policy or usage_log_policy()
+    threshold = policy.archive_threshold_bytes if threshold_bytes is None else int(threshold_bytes)
+    if threshold <= 0:
+        return None
+    try:
+        if path.stat().st_size < threshold:
+            return None
+    except OSError:
+        return None
+
+    stamp = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    staging = _sibling(path, f".archiving-{stamp}-{os.getpid()}")
+    with _usage_log_lock(path):
         try:
-            existing = path.read_text(encoding="utf-8")
-            if f'"period_id":"{period_id}"' in existing or f'"period_id": "{period_id}"' in existing:
-                return
-        except OSError as exc:
-            raise MonitorError(f"Could not inspect usage log {path}: {exc}") from exc
-    with path.open("a", encoding="utf-8") as handle:
-        handle.write(line.rstrip("\n") + "\n")
+            if path.stat().st_size < threshold:
+                return None
+        except OSError:
+            return None
+        os.replace(path, staging)
+        # Leave an empty log in place so a concurrent writer never hits ENOENT.
+        descriptor = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_APPEND, 0o600)
+        os.close(descriptor)
+
+    archive = _sibling(path, f".bak-{stamp}.gz")
+    try:
+        _compress_file(staging, archive, policy.archive_compress_level)
+    except OSError as exc:
+        LOG.warning("Could not compress %s; keeping it uncompressed: %s", staging, exc)
+        archive = _sibling(path, f".bak-{stamp}")
+        with contextlib.suppress(OSError):
+            staging.replace(archive)
+    _prune_usage_log_archives(path, policy.archive_keep)
+    LOG.warning("Archived oversized usage log to %s", archive)
+    return archive
+
+
+def _backfill_reads_archives() -> bool:
+    """Whether backfill may also scan rotated/migrated segments."""
+
+    raw = os.getenv("USAGE_LOG_BACKFILL_ARCHIVES")
+    if raw is None or not str(raw).strip():
+        return True
+    return str(raw).strip().lower() not in {"0", "false", "no", "off"}
+
+
+def _pending_backfill_targets(state_path: Path) -> bool:
+    """True when archiving would strand counters that backfill still needs.
+
+    This mirrors the target selection inside
+    ``backfill_accounting_usage_from_log``: only a window that exists *and*
+    lacks its counters depends on the log history.
+    """
+
+    try:
+        raw = json.loads(state_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return False
+    accounting = raw.get("accounting") if isinstance(raw, dict) else None
+    windows = accounting.get("windows") if isinstance(accounting, dict) else None
+    if not isinstance(windows, dict) or not windows:
+        return False
+    return any(
+        isinstance(window, dict)
+        and isinstance(window.get("anchor"), dict)
+        and ("usage_total" not in window or "usage_by_model" not in window)
+        for window in windows.values()
+    )
+
+
+def prepare_usage_log(
+    usage_log_path: Path | None, state_path: Path | None = None
+) -> Path | None:
+    """Archive a pre-existing oversized log once accounting is safe.
+
+    Backfill reads the log to populate missing counters, so archiving is
+    deferred until those counters are persisted; otherwise the history that
+    backfill needs would be moved into a cold archive first.
+    """
+
+    if usage_log_path is None:
+        return None
+    if state_path is not None and _pending_backfill_targets(state_path):
+        LOG.warning(
+            "Skipping usage log archive: %s still needs backfill from the log",
+            state_path,
+        )
+        return None
+    policy = usage_log_policy()
+    archive = archive_oversized_usage_log(usage_log_path, policy=policy)
+    if archive is None and _usage_log_needs_rotation(usage_log_path, policy):
+        rotate_usage_log(usage_log_path, policy)
+    return archive
+
+
+def _append_usage_line_once(
+    path: Path,
+    line: str,
+    period_id: str | None = None,
+    policy: UsageLogPolicy | None = None,
+) -> None:
+    """Append one log line, deduplicating against a bounded tail.
+
+    The dedup check used to read the entire file.  Only recent entries can
+    collide, so a tail read is both correct and O(tail) in memory.
+    """
+
+    policy = policy or usage_log_policy()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with _usage_log_lock(path):
+        if period_id and _usage_log_has_period(path, period_id, policy.tail_bytes):
+            return
+        if _usage_log_needs_rotation(path, policy):
+            _rotate_usage_log_locked(path, policy)
+        with path.open("a", encoding="utf-8") as handle:
+            handle.write(line.rstrip("\n") + "\n")
+
+
+def _period_end_epoch(value: Any) -> float | None:
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        pass
+    try:
+        return dt.datetime.fromisoformat(str(value)).timestamp()
+    except (TypeError, ValueError, OverflowError):
+        return None
+
+
+def _iter_usage_log_payloads(path: Path) -> Iterator[dict[str, Any]]:
+    """Stream usage_v2 payloads from a log segment one line at a time.
+
+    The generator holds a single line, never the whole file, so backfilling a
+    multi-gigabyte log keeps memory flat.  ``.gz`` segments are decompressed on
+    the fly through the same iterator.
+    """
+
+    if path.suffix == ".gz":
+        handle = gzip.open(path, "rt", encoding="utf-8", errors="replace")
+    else:
+        handle = path.open("r", encoding="utf-8", errors="replace")
+    with handle:
+        for line in handle:
+            marker = line.find("usage_v2=")
+            if marker < 0:
+                continue
+            try:
+                payload = json.loads(line[marker + len("usage_v2=") :])
+            except (IndexError, json.JSONDecodeError):
+                continue
+            if isinstance(payload, dict):
+                yield payload
+
+
+def _usage_log_sources(path: Path) -> list[Path]:
+    """Chronological log segments: oldest archive first, active log last.
+
+    Backfill must still see history that rotation or the one-shot migration
+    moved aside, otherwise an empty active log would reconstruct zero usage.
+    """
+
+    rotated: list[tuple[int, Path]] = []
+    for candidate in path.parent.glob(path.name + ".*"):
+        index = _backup_index(candidate, path.name)
+        if index is not None:
+            rotated.append((index, candidate))
+    rotated.sort(key=lambda item: -item[0])
+    sources = [candidate for _, candidate in rotated]
+    sources.extend(sorted(path.parent.glob(path.name + ".bak-*")))
+    if path.exists():
+        sources.append(path)
+    return sources
 
 
 def backfill_accounting_usage_from_log(
     accounting: dict[str, Any], usage_log_path: Path | None
 ) -> bool:
-    """Populate canonical cumulative counters for older persisted state."""
+    """Populate canonical cumulative counters for older persisted state.
 
-    if usage_log_path is None or not usage_log_path.exists():
+    Rows are folded into per-window counters as they stream past instead of
+    being accumulated in a list, so peak memory stays bounded by the number of
+    windows and models rather than by the size of the log.
+    """
+
+    if usage_log_path is None:
+        return False
+    read_archives = _backfill_reads_archives()
+    if read_archives:
+        sources = _usage_log_sources(usage_log_path)
+    else:
+        sources = [usage_log_path] if usage_log_path.exists() else []
+    if not sources:
         return False
     windows = accounting.get("windows")
     if not isinstance(windows, dict):
@@ -2923,66 +3381,60 @@ def backfill_accounting_usage_from_log(
     if not targets:
         return False
 
+    anchors: dict[str, float | None] = {
+        name: _number(window["anchor"].get("captured_at"))
+        for name, window in targets.items()
+    }
+    usage_totals = {name: _usage_counters() for name in targets}
+    usage_by_model: dict[str, dict[str, dict[str, int]]] = {name: {} for name in targets}
+
+    last_sample = _number(accounting.get("last_sample_at"))
+    seen_period_ids: set[str] = set()
     try:
-        lines = usage_log_path.read_text(encoding="utf-8").splitlines()
+        for source in sources:
+            if not source.exists():
+                continue
+            for payload in _iter_usage_log_payloads(source):
+                period_id = payload.get("period_id")
+                if period_id is not None:
+                    period_key = str(period_id)
+                    if period_key in seen_period_ids:
+                        continue
+                    seen_period_ids.add(period_key)
+                period = payload.get("period")
+                if not isinstance(period, dict):
+                    continue
+                period_end = _period_end_epoch(period.get("end"))
+                if period_end is None:
+                    continue
+                if last_sample is not None and period_end > last_sample:
+                    continue
+                total = payload.get("total")
+                models = payload.get("models")
+                model_rows = models if isinstance(models, dict) else {}
+                for name, anchor_at in anchors.items():
+                    if anchor_at is None or period_end <= anchor_at:
+                        continue
+                    _add_usage_counters(usage_totals[name], total)
+                    bucket = usage_by_model[name]
+                    for model_name, row in model_rows.items():
+                        _add_usage_counters(
+                            bucket.setdefault(str(model_name), _usage_counters()), row
+                        )
     except OSError as exc:
         LOG.warning("Could not backfill cumulative usage from %s: %s", usage_log_path, exc)
         return False
 
-    last_sample = _number(accounting.get("last_sample_at"))
-    parsed_rows: list[dict[str, Any]] = []
-    seen_period_ids: set[str] = set()
-    for line in lines:
-        if "usage_v2=" not in line:
-            continue
-        try:
-            payload = json.loads(line.split("usage_v2=", 1)[1])
-        except (IndexError, json.JSONDecodeError):
-            continue
-        if not isinstance(payload, dict):
-            continue
-        period_id = payload.get("period_id")
-        if period_id is not None:
-            period_key = str(period_id)
-            if period_key in seen_period_ids:
-                continue
-            seen_period_ids.add(period_key)
-        period = payload.get("period")
-        if not isinstance(period, dict):
-            continue
-        end_value = period.get("end")
-        try:
-            period_end = float(end_value)
-        except (TypeError, ValueError):
-            try:
-                period_end = dt.datetime.fromisoformat(str(end_value)).timestamp()
-            except (TypeError, ValueError, OverflowError):
-                continue
-        if last_sample is not None and period_end > last_sample:
-            continue
-        payload["_period_end_epoch"] = period_end
-        parsed_rows.append(payload)
-
     changed = False
-    for window in targets.values():
-        anchor = window["anchor"]
-        anchor_at = _number(anchor.get("captured_at"))
-        usage_total = _usage_counters()
-        usage_by_model: dict[str, dict[str, int]] = {}
-        for payload in parsed_rows:
-            period_end = payload["_period_end_epoch"]
-            if anchor_at is None or period_end <= anchor_at:
-                continue
-            _add_usage_counters(usage_total, payload.get("total"))
-            for model_name, row in (payload.get("models") or {}).items():
-                model_usage = usage_by_model.setdefault(str(model_name), _usage_counters())
-                _add_usage_counters(model_usage, row)
-        window["usage_total"] = usage_total
+    for name, window in targets.items():
+        window["usage_total"] = usage_totals[name]
         window["usage_by_model"] = {
-            name: usage_by_model[name] for name in sorted(usage_by_model)
+            model_name: usage_by_model[name][model_name]
+            for model_name in sorted(usage_by_model[name])
         }
         changed = True
     return changed
+
 
 
 def recover_pending(state_path: Path, usage_log_path: Path | None) -> None:
@@ -3775,10 +4227,15 @@ def main(argv: list[str] | None = None) -> int:
             while True:
                 try:
                     run_once(args.state_path, args.usage_log, weekly_probe=args.weekly_probe)
+                    # Bounded-memory migration: only archives once the state
+                    # already carries the counters that backfill would need.
+                    prepare_usage_log(args.usage_log, args.state_path)
                 except Exception as exc:
                     LOG.error("Check failed: %s", exc)
                 time.sleep(interval)
-        return run_once(args.state_path, args.usage_log, weekly_probe=args.weekly_probe)
+        status = run_once(args.state_path, args.usage_log, weekly_probe=args.weekly_probe)
+        prepare_usage_log(args.usage_log, args.state_path)
+        return status
     except KeyboardInterrupt:
         return 130
     except MonitorError as exc:
